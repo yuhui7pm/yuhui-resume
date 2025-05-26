@@ -233,23 +233,35 @@ const App = () => {
                   <div className="space-y-8">
                     <div className="bg-gradient-to-br from-gray-50 to-purple-50 rounded-2xl p-8 shadow-sm hover:shadow-md transition-all duration-300">
                       <h4 className="font-bold text-xl mb-4 text-gray-800">
-                        技术架构优化与规范化
+                        WATI主平台项目
                         <span className="text-sm font-normal text-gray-500 ml-3 bg-white px-3 py-1 rounded-full">
-                          Vite, TypeScript, Stylelint, Styled-Components, Crowdin
+                          React, TypeScript, Vite, Styled-Components, Crowdin
                         </span>
                       </h4>
                       <div className="space-y-4">
                         <div>
-                          <h5 className="font-semibold text-purple-600 mb-2">主要成就</h5>
+                          <h5 className="font-semibold text-purple-600 mb-2">技术架构优化</h5>
                           <ul className="space-y-2 text-gray-700">
                             <li className="leading-relaxed">
                               •
                               主导项目从Webpack迁移至Vite，开发启动速度提升5倍，CI/CD构建速度提升50%
                             </li>
                             <li className="leading-relaxed">
-                              •
-                              引入并配置Stylelint，制定CSS样式规范，实现CSS变量的统一管理（如font-size:
-                              var(--wati-font-size-l)）
+                              • 优化首屏渲染性能，通过代码分割、懒加载等策略将加载时间从10s降至5s
+                            </li>
+                            <li className="leading-relaxed">
+                              • 实现微前端架构，提升业务模块的独立开发和部署效率
+                            </li>
+                            <li className="leading-relaxed">
+                              • 将前端资源迁移至Google File Storage，优化资源加载性能
+                            </li>
+                          </ul>
+                        </div>
+                        <div>
+                          <h5 className="font-semibold text-purple-600 mb-2">规范化建设</h5>
+                          <ul className="space-y-2 text-gray-700">
+                            <li className="leading-relaxed">
+                              • 引入并配置Stylelint，制定CSS样式规范，实现CSS变量的统一管理
                             </li>
                             <li className="leading-relaxed">
                               • 推进项目TypeScript改造，显著提升代码质量和开发效率
@@ -259,23 +271,6 @@ const App = () => {
                             </li>
                             <li className="leading-relaxed">
                               • 接入Crowdin翻译系统，实现多语言版本的自动化管理
-                            </li>
-                          </ul>
-                        </div>
-                        <div>
-                          <h5 className="font-semibold text-purple-600 mb-2">项目优化</h5>
-                          <ul className="space-y-2 text-gray-700">
-                            <li className="leading-relaxed">
-                              • 实现微前端架构，提升业务模块的独立开发和部署效率
-                            </li>
-                            <li className="leading-relaxed">
-                              • 将前端资源迁移至Google File Storage，优化资源加载性能
-                            </li>
-                            <li className="leading-relaxed">
-                              • 完成数十个页面的UI重构，提升用户体验
-                            </li>
-                            <li className="leading-relaxed">
-                              • 优化首屏渲染性能，通过代码分割、懒加载等策略将加载时间从10s降至5s
                             </li>
                           </ul>
                         </div>
@@ -293,14 +288,38 @@ const App = () => {
                             </li>
                           </ul>
                         </div>
+                        <div>
+                          <h5 className="font-semibold text-purple-600 mb-2">项目成效</h5>
+                          <ul className="space-y-2 text-gray-700">
+                            <li className="leading-relaxed">
+                              • 组件库覆盖率达到85%，大幅减少重复开发工作
+                            </li>
+                            <li className="leading-relaxed">
+                              • 规范化建设显著提升代码质量和团队协作效率
+                            </li>
+                          </ul>
+                        </div>
+                        <div>
+                          <h5 className="font-semibold text-purple-600 mb-2">项目链接</h5>
+                          <div className="space-y-2">
+                            <a
+                              href="https://www.figma.com/design/eP3gMKPnFZIygaCXqvjHEn/wati-forntend-app?node-id=0-1&t=lg9D1UVUvIvEpcbb-1"
+                              className="block text-blue-600 hover:underline"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              查看主平台作品集
+                            </a>
+                          </div>
+                        </div>
                       </div>
                     </div>
 
                     <div className="bg-gradient-to-br from-gray-50 to-purple-50 rounded-2xl p-8 shadow-sm hover:shadow-md transition-all duration-300">
                       <h4 className="font-bold text-xl mb-4 text-gray-800">
-                        产品功能开发与优化
+                        AI产品落地页 & POC展示页面
                         <span className="text-sm font-normal text-gray-500 ml-3 bg-white px-3 py-1 rounded-full">
-                          React, TypeScript, TailwindCSS, Styled-Components
+                          React, TailwindCSS, 响应式设计
                         </span>
                       </h4>
                       <div className="space-y-4">
@@ -308,16 +327,10 @@ const App = () => {
                           <h5 className="font-semibold text-purple-600 mb-2">主要功能</h5>
                           <ul className="space-y-2 text-gray-700">
                             <li className="leading-relaxed">
-                              • 开发并优化AI产品落地页，实现暗黑和极白主题切换，完美适配PC和移动端
+                              • 开发AI产品落地页，实现暗黑和极白主题切换，完美适配PC和移动端
                             </li>
                             <li className="leading-relaxed">
                               • 设计并实现客户POC展示页面，提供直观的产品功能演示
-                            </li>
-                            <li className="leading-relaxed">
-                              • 快速响应并实现数业务需求，包括功能开发和UI重构
-                            </li>
-                            <li className="leading-relaxed">
-                              • 规范化组件开发流程，提升团队开发效率和代码质量
                             </li>
                           </ul>
                         </div>
@@ -330,9 +343,6 @@ const App = () => {
                             <li className="leading-relaxed">
                               • 使用响应式设计和移动优先策略，实现多端完美适配
                             </li>
-                            <li className="leading-relaxed">
-                              • 通过组件抽象和设计系统，提高代码复用率和开发效率
-                            </li>
                           </ul>
                         </div>
                         <div>
@@ -342,9 +352,6 @@ const App = () => {
                               • 产品页面转化率提升30%，用户体验显著改善
                             </li>
                             <li className="leading-relaxed">• POC页面帮助成功获取多个重要客户</li>
-                            <li className="leading-relaxed">
-                              • 组件库覆盖率达到85%，大幅减少重复开发工作
-                            </li>
                           </ul>
                         </div>
                         <div>
@@ -365,14 +372,6 @@ const App = () => {
                               rel="noopener noreferrer"
                             >
                               AI产品落地页
-                            </a>
-                            <a
-                              href="https://www.figma.com/design/eP3gMKPnFZIygaCXqvjHEn/wati-forntend-app?node-id=0-1&t=lg9D1UVUvIvEpcbb-1"
-                              className="block text-blue-600 hover:underline"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                            >
-                              查看产品功能作品集
                             </a>
                           </div>
                         </div>
