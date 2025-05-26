@@ -1,21 +1,9 @@
-import React from 'react'
-import { jsPDF } from 'jspdf'
 import { Document, Packer, Paragraph, TextRun } from 'docx'
 import { saveAs } from 'file-saver'
-import html2canvas from 'html2canvas'
 
 const App = () => {
-  const exportToPDF = async () => {
-    const element = document.getElementById('resume')
-    if (!element) return
-
-    const canvas = await html2canvas(element)
-    const imgData = canvas.toDataURL('image/png')
-    const pdf = new jsPDF('p', 'mm', 'a4')
-    const width = pdf.internal.pageSize.getWidth()
-    const height = pdf.internal.pageSize.getHeight()
-    pdf.addImage(imgData, 'PNG', 0, 0, width, height)
-    pdf.save('余晖的简历.pdf')
+  const exportToPDF = () => {
+    window.print()
   }
 
   const exportToWord = async () => {
@@ -38,7 +26,7 @@ const App = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-50 to-purple-50 py-12">
-      <div className="container mx-auto px-4 max-w-[1200px]">
+      <div className="container mx-auto px-4" style={{ maxWidth: '1000px' }}>
         <div id="resume" className="bg-white rounded-2xl shadow-xl overflow-hidden">
           {/* 顶部个人信息区域 */}
           <div className="bg-gradient-to-r from-purple-600 to-indigo-600 p-8 text-white">
@@ -154,7 +142,7 @@ const App = () => {
                 </h2>
 
                 {/* 深圳云九易科技有限公司 */}
-                <div className="mb-8 relative pl-6 border-l-2 border-purple-200">
+                <div className="mb-8 relative pl-6 border-l-2 border-purple-200 company-section">
                   <div className="absolute w-4 h-4 bg-purple-600 rounded-full -left-[9px] top-0"></div>
                   <div className="mb-4">
                     <div className="flex justify-between items-center">
@@ -223,7 +211,7 @@ const App = () => {
                 </div>
 
                 {/* 深圳小库科技有限公司 */}
-                <div className="mb-8 relative pl-6 border-l-2 border-purple-200">
+                <div className="mb-8 relative pl-6 border-l-2 border-purple-200 company-section">
                   <div className="absolute w-4 h-4 bg-purple-600 rounded-full -left-[9px] top-0"></div>
                   <div className="mb-4">
                     <div className="flex justify-between items-center">
@@ -261,7 +249,7 @@ const App = () => {
                 </div>
 
                 {/* 深信服科技股份有限公司 */}
-                <div className="relative pl-6 border-l-2 border-purple-200">
+                <div className="relative pl-6 border-l-2 border-purple-200 company-section">
                   <div className="absolute w-4 h-4 bg-purple-600 rounded-full -left-[9px] top-0"></div>
                   <div className="mb-4">
                     <div className="flex justify-between items-center">
@@ -298,7 +286,7 @@ const App = () => {
         </div>
 
         {/* 导出按钮 */}
-        <div className="fixed bottom-8 right-8 flex gap-4">
+        <div className="fixed bottom-8 right-8 flex flex-col gap-4 export-buttons">
           <button
             onClick={exportToPDF}
             className="w-14 h-14 rounded-full bg-white hover:bg-purple-600 text-purple-600 hover:text-white flex items-center justify-center shadow-lg hover:scale-110 transition-all duration-300 ease-in-out"

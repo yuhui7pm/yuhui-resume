@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client'
 import App from './App'
 import '@unocss/reset/tailwind.css'
 import 'uno.css'
-import './index.css'
+import './print.css'
 
 // Import UnoCSS styles
 import 'virtual:uno.css'

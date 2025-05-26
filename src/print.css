@@ -1,0 +1,32 @@
+@media print {
+  /* 隐藏导出按钮 */
+  .export-buttons {
+    display: none !important;
+  }
+
+  /* 设置打印背景色 */
+  body {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* 移除页面边距 */
+  @page {
+    margin: 0;
+  }
+
+  /* 确保内容适应A4纸张 */
+  #resume {
+    width: 210mm;
+    min-height: 297mm;
+    padding: 0;
+    margin: 0;
+    box-shadow: none;
+    border-radius: 0;
+  }
+
+  /* 避免内容被分页截断 */
+  .company-section {
+    break-inside: avoid;
+  }
+}
