@@ -1,27 +1,6 @@
-import { Document, Packer, Paragraph, TextRun } from 'docx'
-import { saveAs } from 'file-saver'
-
 const App = () => {
   const exportToPDF = () => {
     window.print()
-  }
-
-  const exportToWord = async () => {
-    const doc = new Document({
-      sections: [
-        {
-          properties: {},
-          children: [
-            new Paragraph({
-              children: [new TextRun({ text: '余晖的简历', bold: true, size: 32 })],
-            }),
-          ],
-        },
-      ],
-    })
-
-    const blob = await Packer.toBlob(doc)
-    saveAs(blob, '余晖的简历.docx')
   }
 
   return (
@@ -293,13 +272,6 @@ const App = () => {
             title="导出PDF"
           >
             <i className="i-mdi-file-pdf text-3xl"></i>
-          </button>
-          <button
-            onClick={exportToWord}
-            className="w-14 h-14 rounded-full bg-white hover:bg-purple-600 text-purple-600 hover:text-white flex items-center justify-center shadow-lg hover:scale-110 transition-all duration-300 ease-in-out"
-            title="导出Word"
-          >
-            <i className="i-mdi-microsoft-word text-3xl"></i>
           </button>
         </div>
       </div>
