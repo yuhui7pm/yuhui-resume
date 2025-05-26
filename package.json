@@ -29,7 +29,6 @@
     "react-router-dom": "^7.6.1",
     "stylelint": "^16.19.1",
     "stylelint-config-standard": "^38.0.0",
-    "tailwindcss": "^4.1.7",
     "unocss": "^66.1.2"
   },
   "devDependencies": {
