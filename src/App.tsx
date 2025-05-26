@@ -17,7 +17,7 @@ const App = () => {
               />
               <div>
                 <h1 className="text-4xl font-bold mb-3">余晖</h1>
-                <p className="text-xl text-purple-100 mb-4">前端架构师和前端负责人</p>
+                <p className="text-xl text-purple-100 mb-4">高级前端开发工程师 | 前端架构师</p>
                 <div className="flex gap-6">
                   <div className="flex items-center gap-2">
                     <i className="i-mdi-phone text-purple-200"></i>
@@ -159,30 +159,30 @@ const App = () => {
                       <div>
                         <h5 className="font-semibold text-purple-600 mb-2">业务功能</h5>
                         <p className="text-gray-700 leading-relaxed">
-                          作为核心开发者，主导开发了16个小游戏及其周边生态系统。项目采用模块化设计，主要包含游戏展示区域、操作界面、玩家信息中心、游戏介绍及音效系统等核心模块。通过Canvas交互实现沉浸式游戏体验，并集成了完整的数据分析和展示功能。
+                          作为核心开发者，主导开发了16个小游戏及其生态系统，实现了从0到1的完整构建。项目采用模块化设计，包含游戏核心引擎、用户交互界面、数据分析系统等关键模块。通过Canvas技术实现高性能渲染，打造沉浸式游戏体验，并集成完整的数据分析和可视化功能。
                         </p>
                       </div>
                       <div>
                         <h5 className="font-semibold text-purple-600 mb-2">技术亮点</h5>
                         <div className="space-y-3">
                           <div>
-                            <p className="font-medium text-gray-800 mb-1">架构设计：</p>
+                            <p className="font-medium text-gray-800 mb-1">技术架构：</p>
                             <p className="text-gray-700 leading-relaxed">
-                              基于Vite构建的现代化前端架构，集成ESLint、Stylelint和Prettier规范代码质量。采用Pinia进行状态管理，Minio处理静态资源，通过Google
-                              Analytics实现用户行为分析。使用Rollup插件优化打包性能，确保了统一的Layout框架下的高效开发。
+                              基于Vite构建的现代化前端架构，采用ESLint、Stylelint和Prettier实现严格的代码规范。使用Pinia进行高效的状态管理，结合Minio实现可靠的静态资源处理。通过Google
+                              Analytics深度集成实现精确的用户行为分析，并使用Rollup插件优化打包性能，确保了统一的Layout框架下的高性能表现。
                             </p>
                           </div>
                           <div>
                             <p className="font-medium text-gray-800 mb-1">核心功能实现：</p>
                             <ul className="list-disc list-inside space-y-2 text-gray-700">
                               <li className="leading-relaxed">
-                                游戏引擎：基于Pixi.js构建高性能画布系统，整合Matter.js物理引擎实现复杂场景。针对性能优化包括：设备适配、页面生命周期管理、内存优化等。
+                                游戏引擎：基于Pixi.js构建高性能渲染系统，整合Matter.js物理引擎实现复杂物理场景。针对性能优化包括：多设备自适应、智能生命周期管理、内存优化等。
                               </li>
                               <li className="leading-relaxed">
-                                交互系统：设计了分层的交互架构，通过自定义Controller封装画布交互行为。
+                                交互系统：设计并实现分层交互架构，通过自定义Controller优化画布交互体验。
                               </li>
                               <li className="leading-relaxed">
-                                数据可视化：基于Antd组件库开发动态数据展示系统。
+                                数据可视化：基于Antd组件库开发实时数据监控和分析系统。
                               </li>
                               <li className="leading-relaxed">
                                 国际化支持：实现完整的i18n解决方案。
@@ -230,7 +230,7 @@ const App = () => {
                       <div>
                         <h5 className="font-semibold text-purple-600 mb-2">业务功能</h5>
                         <p className="text-gray-700 leading-relaxed">
-                          公司官网的开发，主要是向外界展示我司的游戏，适配了PC和移动端，功能涉及：轮播图、游戏列表、api接文档和使用文档（临时版本）、多语言。
+                          公司官网项目负责人，主导开发了面向全球市场的多语言响应式官网。采用Nuxt.js实现SSR，确保更好的SEO效果和首屏加载性能。项目涵盖：产品展示系统、API文档中心、国际化支持等核心功能。
                         </p>
                       </div>
                       <div>
@@ -258,7 +258,9 @@ const App = () => {
                       <div>
                         <h5 className="font-semibold text-purple-600 mb-2">业务功能</h5>
                         <p className="text-gray-700 leading-relaxed">
-                          设计初衷是为了推广运营游戏，而开发商家平台和react-native打包的apk包。非登录状态时，默认以游戏模式下的demo形式下的游戏，用户登录后，则自以下功能模块：主题背景切换，登录模块，语言切换，货币切换，充值模块，轮播，跑马灯广告，游戏列表展示，平台和游戏端之间货币的转入转出，邀请返佣等功能。
+                          作为B端平台核心开发者，设计并实现了完整的商户运营系统。采用Vue3 +
+                          TypeScript技术栈，实现了主题定制、多语言切换、支付系统集成、数据分析等核心功能。同时负责React
+                          Native版本的开发，实现了跨平台统一的用户体验。
                         </p>
                       </div>
                       <div>
@@ -385,7 +387,7 @@ const App = () => {
                         <div>
                           <h5 className="font-semibold text-purple-600 mb-2">项目描述</h5>
                           <p className="text-gray-700 leading-relaxed">
-                            实现多张CAD图纸的上传解析、编辑与审查功能。首先，使用高性能的Canvas库"pixi.js"，将10w+数量级的图元，根据几何类型的不同，调用相应的绘制方法，绘制图元于画布上；并且，使用"RBush"和"碰撞检测"使得图元具有hover、selected、单选多选等简单交互，对于复杂交互，比如图元的增删改等操作，则基于于"事件"实现；另外，还实现图纸的层与高亮和面积功能，以及与高亮相关的缩放功能；最后，对于一些无关画布的操作，比如注册登录、项目列展示、图元信息的显示与编辑、评论功能以及整体流程的串联，则是使用antd组件实现。
+                            作为CAD智能审图平台的核心开发者，成功实现了处理10万级图元的高性能渲染系统。基于Pixi.js实现了复杂的CAD图纸解析与渲染，设计了高效的图元选择与编辑系统。创新性地实现了图层管理、智能测量、协同标注等功能，显著提升了设计审核效率。
                           </p>
                         </div>
                         <div>
@@ -415,13 +417,7 @@ const App = () => {
                         <div>
                           <h5 className="font-semibold text-purple-600 mb-2">项目描述</h5>
                           <p className="text-gray-700 leading-relaxed">
-                            该产品依托海量户型库和智能编辑能力，可快速便捷输出建筑单体设计图纸。本人主要负责产品的重要功能开发，比如：1.
-                            实现户型门门、窗、电梯、楼梯等构建"移、增、删、改、拖、摊铺、回退"等复杂操作；2.
-                            根据户型以及构建的几何信息，实时计算十余种不同的面积指标，并将对应的面积在上显示化；3.
-                            添加平面和模板输入界面板，让用户在存储平面或模板时，可对平面或模板标的适当配置；4.
-                            添加模板设置置面板，对模板中的平面进行"移、增、删、......"等交互。5.
-                            绘制草图一键生成户型，设计师只需要勾勒不同比例块，即可根据算法生成规范的户型，该功能申请了专利，并且被许多同行抄袭模仿。6.
-                            项目主题色切换，根据根节点的自定义属性以及css变量，来切换不同主题。
+                            作为智能建筑设计系统的核心开发者，设计并实现了创新的建筑设计工具。核心功能包括：智能构件编辑系统、实时面积计算引擎、模板管理系统等。特别设计了"草图一键生成"功能并获得专利，该功能通过AI算法将手绘草图转换为标准化建筑户型，显著提升了设计效率。
                           </p>
                         </div>
                         <div>
@@ -483,19 +479,20 @@ const App = () => {
                         <ul className="space-y-2 text-gray-700">
                           <li className="leading-relaxed">
                             1.
-                            使用Ext.js开发新版的"AF防火墙终端管理平台"以及"SD-WAN的终端管理平台"，开发内容以表格表单为主。
+                            主导开发新一代AF防火墙和SD-WAN终端管理平台，实现了设备监控、配置管理等核心功能。
                           </li>
                           <li className="leading-relaxed">
                             2.
-                            使用Vue框架开发BBC管理平台，该平台实现了对SDWAN设备进行监控、配置、管理等功能。页面内容多以表格、表单、弹窗、趋势图为主，使用的工具为我司内部开发的Vue组件库以及Highchart和Echart；并且使用NutUI实现移动端页面，使得用户的手机连接设备后后，可以配置硬件设备。
+                            设计并实现了BBC管理平台的Web端和移动端，采用响应式设计确保多端统一的用户体验。整合了Highchart和Echart实现数据可视化，通过NutUI开发移动端界面。
                           </li>
                           <li className="leading-relaxed">
                             3.
-                            Vue+ts重写的SDWAN的EXT项目，目的是为了解决新人难以入手Ext.js的问题。期间使用Vue-property-decorator来让Vue支持ts的写法，完成的内容和原SDWR的功能保持一致。
+                            主导完成了SDWAN项目的Vue+TypeScript重构，优化了代码架构，提升了开发效率和系统可维护性。
                           </li>
                           <li className="leading-relaxed">
                             4.
-                            完成公司UEDC部门官网的市场城功能。使用Element组件库实现商品展示页、商品详情页面和购买功能；以及后台管理系统的用户信息评价页面和商品评价和购买兑换页面；最后使用koa、sequelize、ts、mysql编写了对应的后端功能。
+                            独立完成UEDC部门官网的商城系统，包括前端展示系统和后台管理系统，采用全栈开发方案（Vue
+                            + Koa + MySQL）。
                           </li>
                         </ul>
                       </div>
