@@ -17,7 +17,7 @@ const App = () => {
               />
               <div>
                 <h1 className="text-4xl font-bold mb-3">余晖</h1>
-                <p className="text-xl text-purple-100 mb-4">高级前端开发工程师</p>
+                <p className="text-xl text-purple-100 mb-4">前端架构师和前端负责人</p>
                 <div className="flex gap-6">
                   <div className="flex items-center gap-2">
                     <i className="i-mdi-phone text-purple-200"></i>
@@ -54,7 +54,7 @@ const App = () => {
                   </div>
                   <div className="flex items-center gap-3">
                     <i className="i-mdi-currency-cny text-purple-600"></i>
-                    <span className="text-gray-700">期望薪资：27K+</span>
+                    <span className="text-gray-700">期望薪资：35K+</span>
                   </div>
                 </div>
               </section>
@@ -423,6 +423,23 @@ const App = () => {
                               查看建筑单体作品集
                             </a>
                           </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="bg-gray-50 rounded-xl p-6">
+                      <h4 className="font-bold text-lg mb-3 text-gray-800">
+                        管理平台
+                        <span className="text-sm font-normal text-gray-500 ml-2">
+                          React18, TypeScript, Antd
+                        </span>
+                      </h4>
+                      <div className="space-y-4">
+                        <div>
+                          <h5 className="font-semibold text-purple-600 mb-2">项目描述</h5>
+                          <p className="text-gray-700 leading-relaxed">
+                            负责项目管理平台的维护开发工作。主要工作包括添加设计工具的入口，展示设计项目信息，展示设计师的信息等功能的开发与维护。该平台作为公司内部重要的管理工具，为设计工作提供了便捷的管理界面。
+                          </p>
                         </div>
                       </div>
                     </div>
