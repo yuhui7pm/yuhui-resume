@@ -316,6 +316,60 @@ const App = () => {
                         </div>
                       </div>
                     </div>
+
+                    <div className="bg-gradient-to-br from-gray-50 to-purple-50 rounded-2xl p-8 shadow-sm hover:shadow-md transition-all duration-300">
+                      <h4 className="font-bold text-xl mb-4 text-gray-800">
+                        产品功能开发与优化
+                        <span className="text-sm font-normal text-gray-500 ml-3 bg-white px-3 py-1 rounded-full">
+                          React, TypeScript, TailwindCSS, Styled-Components
+                        </span>
+                      </h4>
+                      <div className="space-y-4">
+                        <div>
+                          <h5 className="font-semibold text-purple-600 mb-2">主要功能</h5>
+                          <ul className="space-y-2 text-gray-700">
+                            <li className="leading-relaxed">
+                              • 开发并优化AI产品落地页，实现暗黑和极白主题切换，完美适配PC和移动端
+                            </li>
+                            <li className="leading-relaxed">
+                              • 设计并实现客户POC展示页面，提供直观的产品功能演示
+                            </li>
+                            <li className="leading-relaxed">
+                              • 快速响应并实现数业务需求，包括功能开发和UI重构
+                            </li>
+                            <li className="leading-relaxed">
+                              • 规范化组件开发流程，提升团队开发效率和代码质量
+                            </li>
+                          </ul>
+                        </div>
+                        <div>
+                          <h5 className="font-semibold text-purple-600 mb-2">技术亮点</h5>
+                          <ul className="space-y-2 text-gray-700">
+                            <li className="leading-relaxed">
+                              • 采用CSS变量和TailwindCSS实现主题切换，确保视觉一致性
+                            </li>
+                            <li className="leading-relaxed">
+                              • 使用响应式设计和移动优先策略，实现多端完美适配
+                            </li>
+                            <li className="leading-relaxed">
+                              • 通过组件抽象和设计系统，提高代码复用率和开发效率
+                            </li>
+                          </ul>
+                        </div>
+                        <div>
+                          <h5 className="font-semibold text-purple-600 mb-2">项目成效</h5>
+                          <ul className="space-y-2 text-gray-700">
+                            <li className="leading-relaxed">
+                              • 产品页面转化率提升30%，用户体验显著改善
+                            </li>
+                            <li className="leading-relaxed">• POC页面帮助成功获取多个重要客户</li>
+                            <li className="leading-relaxed">
+                              • 组件库覆盖率达到85%，大幅减少重复开发工作
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
 
