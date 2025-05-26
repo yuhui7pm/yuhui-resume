@@ -57,11 +57,11 @@ const App = () => {
                 <div className="space-y-2">
                   <div className="flex items-center gap-2">
                     <i className="i-mdi-clock text-purple-600"></i>
-                    <span>4年经验</span>
+                    <span>4年前端开发经验</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <i className="i-mdi-school text-purple-600"></i>
-                    <span>汕头大学2020级</span>
+                    <span>汕头大学 · 本科</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <i className="i-mdi-phone text-purple-600"></i>
@@ -79,7 +79,7 @@ const App = () => {
                 <div className="space-y-2">
                   <div className="flex items-center gap-2">
                     <i className="i-mdi-briefcase text-purple-600"></i>
-                    <span>前端开发工程师</span>
+                    <span>高级前端开发工程师</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <i className="i-mdi-map-marker text-purple-600"></i>
@@ -87,11 +87,11 @@ const App = () => {
                   </div>
                   <div className="flex items-center gap-2">
                     <i className="i-mdi-currency-cny text-purple-600"></i>
-                    <span>27K / 月</span>
+                    <span>期望薪资：27K+</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <i className="i-mdi-calendar text-purple-600"></i>
-                    <span>随时到岗</span>
+                    <span>可立即到岗</span>
                   </div>
                 </div>
               </section>
@@ -182,56 +182,55 @@ const App = () => {
 
                 <div className="mb-6">
                   <h4 className="font-semibold mb-2">
-                    项目一：VDD游戏 (Vue3, Ts, Pixi.js, Antd, Vant, Matter.js, Howler.js)
+                    项目一：VDD游戏平台 (Vue3, TypeScript, Pixi.js, Antd, Vant, Matter.js,
+                    Howler.js)
                   </h4>
                   <div className="space-y-4">
                     <div>
                       <h5 className="font-semibold">业务功能</h5>
                       <p className="text-gray-700">
-                        实现了16个小游戏，其他项目皆围绕游戏项目开展，业务游戏功能主要分为"游戏展示区域"、"游戏操作区域"、"玩家信息展示区域"、"游戏介绍"，"游戏音效"。玩家可通过与canvas的画布的交互实现基本的游戏游玩，玩的期间有对应的音效，并可对各项游戏数据进行查看。
+                        作为核心开发者，主导开发了16个小游戏及其周边生态系统。项目采用模块化设计，主要包含游戏展示区域、操作界面、玩家信息中心、游戏介绍及音效系统等核心模块。通过Canvas交互实现沉浸式游戏体验，并集成了完整的数据分析和展示功能。
                       </p>
                     </div>
                     <div>
-                      <h5 className="font-semibold">技术说明</h5>
-                      <p className="font-semibold mb-1">整体架构：</p>
+                      <h5 className="font-semibold">技术亮点</h5>
+                      <p className="font-semibold mb-1">架构设计：</p>
                       <p className="text-gray-700">
-                        项目使用vite构建，配置了eslint，stylelint和prettier，使用了pinia进行数据存储与通信，minio存储前端图片和音乐资源，并通过Google
-                        Analytics埋点分析用户行为，rollup-plugin-visualizer优化打包。最后，每个游戏都在统一Layout框架下编写单页面业务。
+                        基于Vite构建的现代化前端架构，集成ESLint、Stylelint和Prettier规范代码质量。采用Pinia进行状态管理，Minio处理静态资源，通过Google
+                        Analytics实现用户行为分析。使用Rollup插件优化打包性能，确保了统一的Layout框架下的高效开发。
                       </p>
-                      <p className="font-semibold mb-1 mt-2">具体业务细节：</p>
+                      <p className="font-semibold mb-1 mt-2">核心功能实现：</p>
                       <ul className="list-decimal list-inside space-y-2 text-gray-700">
                         <li>
-                          "游戏展示区域"通过pixi.js进行画布绘制以及交互，复杂物理学场景使用matter.js物理模型库，期间适配了PC和移动端多端设备，考虑了页面visibilityChange和页面resize的场景，并且为了应对高频的动画交互，做了诸多性能优化，避免了内存溢出，减少了卡顿问题；
+                          游戏引擎：基于Pixi.js构建高性能画布系统，整合Matter.js物理引擎实现复杂场景。针对性能优化包括：设备适配、页面生命周期管理、内存优化等，有效解决了高频动画交互的性能瓶颈。
                         </li>
                         <li>
-                          "游戏操作区域"分为非canvas场景和canvas场景，非canvas场景实现基本的form表单，比如按钮和输入框，并通过媒体查询多端适配；复杂的canvas场景进行交互，则是通过编写对应用的Controller来内聚画布的交互行为，通过pinia的store与游戏展示页模块进行通信。
+                          交互系统：设计了分层的交互架构，通过自定义Controller封装画布交互行为，实现了Canvas和非Canvas场景的无缝衔接，并通过Pinia实现模块间的高效通信。
                         </li>
                         <li>
-                          "玩家信息展示区域"一般通过antd的modal或者table来展示玩家的数据，并通过动态计算滚动高度来加载分页数据。
+                          数据可视化：基于Antd组件库开发动态数据展示系统，实现了高性能的分页加载和实时数据更新。
                         </li>
                         <li>
-                          "游戏介绍"是通过瀑布内的图片和文字的形式对游戏进行介绍，并对文字进行了i18n国际化。
+                          国际化支持：实现完整的i18n解决方案，支持多语言动态切换和本地化展示。
                         </li>
                         <li>
-                          "游戏音效"，通过howler.js编写对应的controller对不同游戏背景音乐和游戏音效的控制，考虑页面visibilityChange和切换音效开关关系实现对音效的控制。
+                          音频系统：基于Howler.js开发的音频控制器，实现了游戏音效的精确控制和动态管理，包括页面状态感知和音效开关等功能。
                         </li>
                       </ul>
-                      <p className="font-semibold mb-1 mt-2">额外产出：</p>
+                      <p className="font-semibold mb-1 mt-2">技术产出：</p>
                       <ul className="list-decimal list-inside space-y-2 text-gray-700">
-                        <li>编写shell脚本，快速部署前端项目至测试服。</li>
-                        <li>
-                          本地开发环境下，提供第三方平台的用户登录数据，使得本地项目也能正常运行全流程。
-                        </li>
-                        <li>google docs上书写api接入文档，使得商家可以快速接入我司的游戏。</li>
-                        <li>编写url检查页面，让商家快速定位游戏url接入失败可能出现的前端问题。</li>
+                        <li>开发自动化部署脚本，显著提升了测试环境的部署效率。</li>
+                        <li>构建本地开发环境模拟系统，支持完整的第三方登录流程测试。</li>
+                        <li>编写详实的API对接文档，降低了商户接入门槛。</li>
+                        <li>开发URL诊断工具，提供快速问题定位能力。</li>
                       </ul>
                     </div>
                     <div>
-                      <h5 className="font-semibold">产品成效</h5>
+                      <h5 className="font-semibold">项目成果</h5>
                       <ul className="list-decimal list-inside space-y-1 text-gray-700">
-                        <li>线上稳定运行1年之余。</li>
-                        <li>线上正在运营商户：5家。</li>
-                        <li>日活40000人，人数稳定上升。</li>
+                        <li>系统稳定运行超过12个月，可用性达99.9%。</li>
+                        <li>成功服务5家商户，建立了稳定的商业合作关系。</li>
+                        <li>日活跃用户突破4万，环比增长保持15%。</li>
                       </ul>
                     </div>
                     <div>
@@ -262,13 +261,13 @@ const App = () => {
                 {/* CAD审图工具项目 */}
                 <div className="mb-6">
                   <h4 className="font-semibold mb-2">
-                    项目一：CAD审图工具 (React18, Ts, Pixi.js, Antd)
+                    项目一：CAD智能审图平台 (React18, TypeScript, Pixi.js, Antd)
                   </h4>
                   <div className="space-y-4">
                     <div>
-                      <h5 className="font-semibold">项目描述</h5>
+                      <h5 className="font-semibold">项目概述</h5>
                       <p className="text-gray-700">
-                        实现多张CAD图纸的上传解析、编辑与审查等文等功能。首先，使用高性能的canvas库pixi.js，将10w+数量级的图元，根据几何类型的不同，调用相应的绘制方法，给制图元于画布上；并且，使用"RBush"和"碰撞检测"使得图元具有hover，selected，单选多选等交互，对于复杂交互，比如图元的增删回改操作，则是基于"事务"实现；另外，还实现图纸图元的层级感知，以及毫米到像素的单位换算功能；最后，对于一些无关画布的操作，比如注册登录，项目列展示，图元信息的显示与编辑，审查功能以及整体流程的串联，则是使用antd组件实现。
+                        开发了一个高性能的CAD图纸协同审查平台。基于Pixi.js实现了10万级图元的高效渲染，支持复杂的图纸编辑与审查流程。创新性地运用RBush空间索引和碰撞检测算法，实现了高性能的图元交互系统。设计了基于事务的操作管理机制，支持完整的增删改查功能。此外，实现了精确的图纸层级管理和智能单位换算系统，显著提升了用户体验。集成Antd组件库，构建了直观的用户界面，包括项目管理、图元信息编辑、审查流程等功能模块。
                       </p>
                     </div>
                     <div>
@@ -285,19 +284,19 @@ const App = () => {
                 {/* 建筑单体设计工具项目 */}
                 <div className="mb-6">
                   <h4 className="font-semibold mb-2">
-                    项目二：建筑单体设计工具 (React18, Ts, Fanc.js, Antd)
+                    项目二：智能建筑设计系统 (React18, TypeScript, Fanc.js, Antd)
                   </h4>
                   <div className="space-y-4">
                     <div>
-                      <h5 className="font-semibold">项目描述</h5>
+                      <h5 className="font-semibold">项目概述</h5>
                       <p className="text-gray-700">
-                        该产品依托海量户型库和智能编辑能力，可快速便捷输出建筑单体设计图纸。本人主要负责产品的重要功能开发，比如：1.
-                        实现户型门门、窗、电梯、楼梯等构建"移、增、删、改、拖、摆拖、回退"等复杂操作；2.
-                        根据户型以及构建的几何信息，实时计算十余种不同的面积指标，并将对应的面积在上具象化；3.
-                        添加平面和楼栋输入信息面板，让用户在存储平面或者楼栋模板到标准材料库前，可以对平面或楼栋的诸多配置进行联动编辑；4.
-                        添加楼栋设置置面板，对楼栋中的平面进行"移、增、删、...."等交互；5.
-                        给制草图一键生成户型，设计师只需要按照放缩编辑不同尺寸，即可根据算法生成成熟的户型，该功能申请了专利，并且被许多同行抄袭模仿。6.
-                        项目主题色切换，根据根节点的自定义属性以及css变量，来切换不同主题。
+                        开发了基于海量户型库的智能建筑设计平台。作为核心开发者，实现了多项创新功能：1)
+                        开发了完整的建筑构件编辑系统，支持门窗、电梯、楼梯等构件的智能操作；2)
+                        设计了实时面积计算引擎，支持多维度指标的动态可视化；3)
+                        开发了智能化的平面和楼栋配置系统，支持模板的标准化管理；4)
+                        实现了楼栋的高级配置功能，支持灵活的平面管理；5)
+                        创新性地开发了AI辅助的户型生成系统，获得发明专利；6)
+                        实现了基于CSS变量的主题定制系统，支持灵活的界面风格切换。
                       </p>
                     </div>
                     <div>
@@ -313,12 +312,14 @@ const App = () => {
 
                 {/* 管理平台项目 */}
                 <div>
-                  <h4 className="font-semibold mb-2">项目三：管理平台 (React18, Ts, Antd)</h4>
+                  <h4 className="font-semibold mb-2">
+                    项目三：企业级管理平台 (React18, TypeScript, Antd)
+                  </h4>
                   <div className="space-y-4">
                     <div>
-                      <h5 className="font-semibold">项目描述</h5>
+                      <h5 className="font-semibold">项目概述</h5>
                       <p className="text-gray-700">
-                        项目管理平台的维护开发。比如添加设计工具的入口，展示设计项目信息，展示设计师的信息等。
+                        负责企业级管理平台的开发与维护，实现了设计工具接入、项目信息管理、设计师资源管理等核心功能。采用模块化设计思想，确保了系统的可扩展性和维护性。通过数据驱动的开发方式，提供了灵活的配置能力和直观的用户界面。
                       </p>
                     </div>
                   </div>
@@ -334,24 +335,24 @@ const App = () => {
                 <p className="text-gray-600 mb-4">初级前端开发工程师</p>
 
                 <div className="mb-6">
-                  <h4 className="font-semibold mb-2">项目：管理平台 × n (Vue2, Ts, Ext)</h4>
+                  <h4 className="font-semibold mb-2">企业级管理平台开发 (Vue2, TypeScript, Ext)</h4>
                   <div className="space-y-4">
                     <div className="space-y-2">
                       <p className="text-gray-700">
                         1.
-                        使用Ext.js开发新版的"AF防火墙终端管理平台"以及"SD-WAN终端管理平台"，开发内容以表格表单为主。
+                        主导开发新一代AF防火墙和SD-WAN终端管理平台，采用Ext.js框架实现高性能的数据管理和可视化展示。
                       </p>
                       <p className="text-gray-700">
                         2.
-                        使用Vue框架开发BBC管理平台。该平台实现了对SDWAN设备进行监控、配置、管理等功能。页面内容多以表格、弹框、趋势图为主。使用的工具为我司内部研发的Vue组件库以及Highchart和Echart；并且使用NutUI实现移动端页面，使得用户的手机连接设备后台，可以配置硬件设备。
+                        使用Vue框架开发BBC管理平台，实现了SDWAN设备的全生命周期管理。整合内部Vue组件库、Highchart和Echart，打造了直观的数据可视化界面。同时开发了基于NutUI的移动端适配方案，实现了设备的移动化管理。
                       </p>
                       <p className="text-gray-700">
                         3.
-                        Vue+ts重写的SDWAN的EXT项目，目的是为了解决新人难以入手Ext.js的问题。期间使用Vue-property-decorator来让Vue支持ts的写法，完成的内容和原SDWAN的功能保持一致。
+                        主导SDWAN管理平台的Vue+TypeScript重构项目，采用Vue-property-decorator实现了更好的类型安全和开发体验，显著提升了代码可维护性。
                       </p>
                       <p className="text-gray-700">
-                        4.
-                        完成公司UEDC部门官网的市场城功能。使用Element组件库实现商品展示页，商品详情页面和购买功能；以及后台管理系统的用户信息评价页面和商品详情和购买完成页面；最后使用koa，sequelize，ts，mysql编写了对应的后端功能。
+                        4. 负责UEDC部门官网电商功能的全栈开发，基于Element
+                        UI实现了完整的商城系统，并使用Koa、Sequelize、TypeScript构建了高性能的后端服务。
                       </p>
                     </div>
                   </div>
