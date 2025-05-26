@@ -44,9 +44,9 @@ const App = () => {
           <div className="w-1/4 bg-white">
             <div className="mb-8">
               <img
-                src="/images/avatar.svg"
+                src="/yuhui-resume/images/yuhui.jpg"
                 alt="余晖"
-                className="w-32 h-32 rounded-full mx-auto mb-4 bg-purple-100"
+                className="w-32 h-32 rounded-full mx-auto mb-4 object-cover"
               />
               <h1 className="text-3xl font-bold text-center text-purple-600 mb-4">余晖</h1>
             </div>
