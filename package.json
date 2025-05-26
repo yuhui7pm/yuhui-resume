@@ -17,6 +17,7 @@
     "@unocss/preset-typography": "^66.1.2",
     "@unocss/preset-uno": "^66.1.2",
     "@unocss/reset": "^66.1.2",
+    "dom-to-image-more": "^3.6.0",
     "eslint-config-prettier": "^10.1.5",
     "eslint-plugin-react": "^7.37.5",
     "html2canvas": "^1.4.1",

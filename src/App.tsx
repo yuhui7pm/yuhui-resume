@@ -1,6 +1,74 @@
+import html2canvas from 'html2canvas'
+
 const App = () => {
-  const exportToPDF = () => {
-    window.print()
+  const exportToImage = async () => {
+    console.log('开始导出图片')
+    // 临时隐藏导出按钮
+    const exportButtons = document.querySelector('.export-buttons')
+    if (exportButtons) {
+      exportButtons.classList.add('hidden')
+    }
+
+    try {
+      const resumeElement = document.getElementById('resume')
+      if (!resumeElement) {
+        console.error('找不到简历元素')
+        return
+      }
+
+      // 保存原始滚动位置
+      const originalScrollPos = window.scrollY
+
+      // 滚动到顶部
+      window.scrollTo(0, 0)
+
+      // 等待一下确保滚动和重排完成
+      await new Promise((resolve) => setTimeout(resolve, 500))
+
+      // 使用html2canvas生成图片，添加优化配置
+      const canvas = await html2canvas(resumeElement, {
+        scale: 2, // 固定使用2倍缩放
+        useCORS: true,
+        allowTaint: true,
+        backgroundColor: '#ffffff',
+        logging: true, // 开启日志以便调试
+        windowWidth: resumeElement.scrollWidth,
+        windowHeight: resumeElement.scrollHeight,
+        width: resumeElement.offsetWidth,
+        height: resumeElement.offsetHeight,
+        onclone: (clonedDoc) => {
+          // 在克隆的文档中应用必要的样式
+          const clonedElement = clonedDoc.getElementById('resume')
+          if (clonedElement) {
+            clonedElement.style.transform = 'none'
+            clonedElement.style.width = `${resumeElement.offsetWidth}px`
+            clonedElement.style.height = `${resumeElement.offsetHeight}px`
+            clonedElement.style.position = 'relative'
+            clonedElement.style.top = '0'
+            clonedElement.style.left = '0'
+          }
+        },
+      })
+
+      // 转换为PNG并下载
+      const dataUrl = canvas.toDataURL('image/png', 1.0)
+      const link = document.createElement('a')
+      link.download = '余晖的简历.png'
+      link.href = dataUrl
+      document.body.appendChild(link)
+      link.click()
+      document.body.removeChild(link)
+
+      // 恢复原始滚动位置
+      window.scrollTo(0, originalScrollPos)
+    } catch (error) {
+      console.error('导出图片失败:', error)
+    } finally {
+      // 恢复导出按钮显示
+      if (exportButtons) {
+        exportButtons.classList.remove('hidden')
+      }
+    }
   }
 
   return (
@@ -146,6 +214,110 @@ const App = () => {
                 <h2 className="text-2xl font-bold mb-8 text-gray-800 border-b-2 border-purple-200 pb-2 flex items-center">
                   <i className="i-mdi-briefcase mr-3 text-2xl text-purple-600"></i>工作经验
                 </h2>
+
+                {/* WATI */}
+                <div className="mb-12 relative pl-8 border-l-2 border-purple-200 company-section">
+                  <div className="absolute w-5 h-5 bg-purple-600 rounded-full -left-[11px] top-0 shadow-lg"></div>
+                  <div className="mb-6">
+                    <div className="flex justify-between items-center">
+                      <h3 className="text-2xl font-bold text-gray-800 hover:text-purple-600 transition-colors">
+                        WATI
+                      </h3>
+                      <span className="text-purple-600 font-medium px-4 py-1 bg-purple-50 rounded-full">
+                        2024.06 - 至今
+                      </span>
+                    </div>
+                    <p className="text-gray-600 mt-2 font-medium">前端负责人 | 前端架构师</p>
+                  </div>
+
+                  <div className="space-y-8">
+                    <div className="bg-gradient-to-br from-gray-50 to-purple-50 rounded-2xl p-8 shadow-sm hover:shadow-md transition-all duration-300">
+                      <h4 className="font-bold text-xl mb-4 text-gray-800">
+                        技术架构优化与规范化
+                        <span className="text-sm font-normal text-gray-500 ml-3 bg-white px-3 py-1 rounded-full">
+                          Vite, TypeScript, Stylelint, Styled-Components, Crowdin
+                        </span>
+                      </h4>
+                      <div className="space-y-4">
+                        <div>
+                          <h5 className="font-semibold text-purple-600 mb-2">主要成就</h5>
+                          <ul className="space-y-2 text-gray-700">
+                            <li className="leading-relaxed">
+                              •
+                              主导项目从Webpack迁移至Vite，开发启动速度提升5倍，CI/CD构建速度提升50%
+                            </li>
+                            <li className="leading-relaxed">
+                              •
+                              引入并配置Stylelint，制定CSS样式规范，实现CSS变量的统一管理（如font-size:
+                              var(--wati-font-size-l)）
+                            </li>
+                            <li className="leading-relaxed">
+                              • 推进项目TypeScript改造，显著提升代码质量和开发效率
+                            </li>
+                            <li className="leading-relaxed">
+                              • 规范化Styled-Components命名规则，提升组件可维护性
+                            </li>
+                            <li className="leading-relaxed">
+                              • 接入Crowdin翻译系统，实现多语言版本的自动化管理
+                            </li>
+                          </ul>
+                        </div>
+                        <div>
+                          <h5 className="font-semibold text-purple-600 mb-2">项目优化</h5>
+                          <ul className="space-y-2 text-gray-700">
+                            <li className="leading-relaxed">
+                              • 实现微前端架构，提升业务模块的独立开发和部署效率
+                            </li>
+                            <li className="leading-relaxed">
+                              • 将前端资源迁移至Google File Storage，优化资源加载性能
+                            </li>
+                            <li className="leading-relaxed">
+                              • 完成数十个页面的UI重构，提升用户体验
+                            </li>
+                            <li className="leading-relaxed">
+                              • 优化首屏渲染性能，通过代码分割、懒加载等策略将加载时间从10s降至5s
+                            </li>
+                          </ul>
+                        </div>
+                        <div>
+                          <h5 className="font-semibold text-purple-600 mb-2">团队管理</h5>
+                          <ul className="space-y-2 text-gray-700">
+                            <li className="leading-relaxed">
+                              • 建立完善的代码审查流程，制定团队开发规范
+                            </li>
+                            <li className="leading-relaxed">
+                              • 主导技术文档体系建设，提升团队协作效率
+                            </li>
+                            <li className="leading-relaxed">
+                              • 负责团队招聘与培养，提升团队整体技术能力
+                            </li>
+                          </ul>
+                        </div>
+                        <div>
+                          <h5 className="font-semibold text-purple-600 mb-2">项目链接</h5>
+                          <div className="space-y-2">
+                            <a
+                              href="https://clareai.github.io/utm-web-site/"
+                              className="block text-blue-600 hover:underline"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              客户POC页面
+                            </a>
+                            <a
+                              href="https://www.engagechat.ai/"
+                              className="block text-blue-600 hover:underline"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              AI产品落地页
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
 
                 {/* 深圳云九易科技有限公司 */}
                 <div className="mb-12 relative pl-8 border-l-2 border-purple-200 company-section">
@@ -534,11 +706,11 @@ const App = () => {
         {/* 导出按钮 */}
         <div className="fixed bottom-8 right-8 flex flex-col gap-4 export-buttons">
           <button
-            onClick={exportToPDF}
+            onClick={exportToImage}
             className="w-16 h-16 rounded-full bg-gradient-to-r from-purple-600 to-indigo-600 text-white flex items-center justify-center shadow-lg hover:scale-110 transition-all duration-300 ease-in-out hover:shadow-purple-300"
-            title="导出PDF"
+            title="导出图片"
           >
-            <i className="i-mdi-file-pdf text-3xl"></i>
+            <i className="i-mdi-image text-3xl"></i>
           </button>
         </div>
       </div>
