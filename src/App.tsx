@@ -235,34 +235,41 @@ const App = () => {
                       <h4 className="font-bold text-xl mb-4 text-gray-800">
                         WATI前端应用项目
                         <span className="text-sm font-normal text-gray-500 ml-3 bg-white px-3 py-1 rounded-full">
-                          React 18, TypeScript, Redux, Redux-Saga, MUI, Styled-Components, Vite,
-                          Jest
+                          React 18, TypeScript, Redux, Redux-Saga, MUI, Styled-Components, Vite
                         </span>
                       </h4>
                       <div className="space-y-4">
                         <div>
                           <h5 className="font-semibold text-purple-600 mb-2">项目概述</h5>
                           <p className="text-gray-700 leading-relaxed">
-                            作为一个企业级SaaS应用的前端开发项目，采用现代化的微前端架构（Module
-                            Federation），实现了高度可扩展和可维护的代码库。项目使用TypeScript进行开发，确保了代码的类型安全和可维护性。
+                            作为企业级SaaS应用的前端负责人，主导了从Webpack迁移至Vite的技术升级，采用微前端架构提升团队协作效率。项目使用TypeScript进行开发，确保了代码的类型安全和可维护性。
                           </p>
                         </div>
                         <div>
                           <h5 className="font-semibold text-purple-600 mb-2">技术架构优化</h5>
                           <ul className="space-y-2 text-gray-700">
                             <li className="leading-relaxed">
-                              •
-                              主导项目从Webpack迁移至Vite，开发启动速度提升5倍，CI/CD构建速度提升50%
+                              • 主导Webpack迁移至Vite，开发启动速度提升5倍，CI/CD构建速度提升50%
                             </li>
                             <li className="leading-relaxed">
-                              • 采用Module Federation实现微前端架构，提高代码复用性和团队协作效率
+                              • 采用Module Federation实现微前端架构，优化首屏渲染从10s降至5s
                             </li>
                             <li className="leading-relaxed">
-                              • 使用Redux +
-                              Redux-Saga管理复杂的应用状态和异步操作，实现可预测的数据流
+                              • 使用Redux + Redux-Saga管理复杂的应用状态，实现可预测的数据流
                             </li>
                             <li className="leading-relaxed">
-                              • 优化首屏渲染性能，通过代码分割、懒加载等策略将加载时间从10s降至5s
+                              • 基于Material-UI开发现代化界面，使用Styled-Components实现主题定制
+                            </li>
+                          </ul>
+                        </div>
+                        <div>
+                          <h5 className="font-semibold text-purple-600 mb-2">工程化实践</h5>
+                          <ul className="space-y-2 text-gray-700">
+                            <li className="leading-relaxed">
+                              • 建立完整代码规范体系，引入ESLint、Stylelint和Jest测试框架
+                            </li>
+                            <li className="leading-relaxed">
+                              • 接入Crowdin翻译系统，实现多语言版本的自动化管理
                             </li>
                             <li className="leading-relaxed">
                               • 集成性能监控和错误追踪系统，提升应用稳定性
@@ -270,61 +277,13 @@ const App = () => {
                           </ul>
                         </div>
                         <div>
-                          <h5 className="font-semibold text-purple-600 mb-2">UI/UX实现</h5>
-                          <ul className="space-y-2 text-gray-700">
-                            <li className="leading-relaxed">
-                              • 基于Material-UI (MUI)组件库开发现代化用户界面
-                            </li>
-                            <li className="leading-relaxed">
-                              • 使用Styled-Components实现可维护和可扩展的样式系统
-                            </li>
-                            <li className="leading-relaxed">
-                              • 支持多语言国际化(i18n)和主题定制功能
-                            </li>
-                          </ul>
-                        </div>
-                        <div>
-                          <h5 className="font-semibold text-purple-600 mb-2">质量保证</h5>
-                          <ul className="space-y-2 text-gray-700">
-                            <li className="leading-relaxed">
-                              • 引入并配置ESLint、Stylelint，制定代码规范，确保代码质量和一致性
-                            </li>
-                            <li className="leading-relaxed">
-                              • 实现完整的单元测试和集成测试（Jest），提升代码可靠性
-                            </li>
-                            <li className="leading-relaxed">
-                              • 规范化Styled-Components命名规则，提升组件可维护性
-                            </li>
-                            <li className="leading-relaxed">
-                              • 接入Crowdin翻译系统，实现多语言版本的自动化管理
-                            </li>
-                          </ul>
-                        </div>
-                        <div>
                           <h5 className="font-semibold text-purple-600 mb-2">团队管理</h5>
                           <ul className="space-y-2 text-gray-700">
                             <li className="leading-relaxed">
-                              • 建立完善的代码审查流程，制定团队开发规范
+                              • 负责团队管理和技术培训，建立完善的代码审查流程
                             </li>
                             <li className="leading-relaxed">
                               • 主导技术文档体系建设，提升团队协作效率
-                            </li>
-                            <li className="leading-relaxed">
-                              • 负责团队招聘与培养，提升团队整体技术能力
-                            </li>
-                          </ul>
-                        </div>
-                        <div>
-                          <h5 className="font-semibold text-purple-600 mb-2">项目成效</h5>
-                          <ul className="space-y-2 text-gray-700">
-                            <li className="leading-relaxed">
-                              • 组件库覆盖率达到85%，大幅减少重复开发工作
-                            </li>
-                            <li className="leading-relaxed">
-                              • 规范化建设显著提升代码质量和团队协作效率
-                            </li>
-                            <li className="leading-relaxed">
-                              • 完整的TypeScript支持，提供了强类型保证，降低线上错误率
                             </li>
                           </ul>
                         </div>
@@ -348,59 +307,33 @@ const App = () => {
                       <h4 className="font-bold text-xl mb-4 text-gray-800">
                         Astra Landing Page
                         <span className="text-sm font-normal text-gray-500 ml-3 bg-white px-3 py-1 rounded-full">
-                          React 18, TypeScript, Vite 6, Ant Design 5.x, Less, i18next
+                          React 18, TypeScript, Vite, Ant Design, Less, i18next
                         </span>
                       </h4>
                       <div className="space-y-4">
                         <div>
                           <h5 className="font-semibold text-purple-600 mb-2">项目概述</h5>
                           <p className="text-gray-700 leading-relaxed">
-                            独立开发并维护的现代化企业官网落地页项目，采用最新的前端技术栈构建，实现了响应式设计和国际化支持，确保了良好的用户体验和性能表现。
+                            独立开发的企业官网落地页项目，采用现代化技术栈，实现响应式设计、多语言支持和主题切换功能。
                           </p>
                         </div>
                         <div>
-                          <h5 className="font-semibold text-purple-600 mb-2">技术实现</h5>
+                          <h5 className="font-semibold text-purple-600 mb-2">核心工作</h5>
                           <ul className="space-y-2 text-gray-700">
                             <li className="leading-relaxed">
-                              • 基于React 18 + TypeScript + Vite 6构建，采用现代化的开发方案
+                              • 基于React 18和TypeScript构建，使用Vite提升开发体验
                             </li>
                             <li className="leading-relaxed">
-                              • 使用Ant Design 5.x组件库，结合Less预处理器实现统一的设计风格
+                              • 使用i18next实现多语言切换，支持自动检测用户语言
                             </li>
                             <li className="leading-relaxed">
-                              •
-                              集成i18next实现多语言支持，配合i18next-browser-languagedetector实现自动语言检测
+                              • 通过CSS变量实现极简白和暗黑主题无缝切换
                             </li>
                             <li className="leading-relaxed">
-                              • 采用模块化的目录结构，使用Context API进行状态管理
-                            </li>
-                          </ul>
-                        </div>
-                        <div>
-                          <h5 className="font-semibold text-purple-600 mb-2">工程化实践</h5>
-                          <ul className="space-y-2 text-gray-700">
-                            <li className="leading-relaxed">
-                              • 实现完整的代码规范体系，集成ESLint + Prettier + StyleLint
+                              • 采用移动优先设计，完美适配手机和PC端显示
                             </li>
                             <li className="leading-relaxed">
-                              • 使用Husky配合Commitlint规范代码提交信息
-                            </li>
-                            <li className="leading-relaxed">
-                              • 使用Docker容器化部署，配置Vite优化打包性能
-                            </li>
-                          </ul>
-                        </div>
-                        <div>
-                          <h5 className="font-semibold text-purple-600 mb-2">项目成效</h5>
-                          <ul className="space-y-2 text-gray-700">
-                            <li className="leading-relaxed">
-                              • 产品页面转化率提升30%，用户体验显著改善
-                            </li>
-                            <li className="leading-relaxed">
-                              • 建立了规范的前端开发流程和工程化体系
-                            </li>
-                            <li className="leading-relaxed">
-                              • 通过模块化设计提高了代码复用率和可维护性
+                              • 完整的工程化配置和Docker容器化部署
                             </li>
                           </ul>
                         </div>
@@ -422,62 +355,29 @@ const App = () => {
 
                     <div className="bg-gradient-to-br from-gray-50 to-purple-50 rounded-2xl p-8 shadow-sm hover:shadow-md transition-all duration-300">
                       <h4 className="font-bold text-xl mb-4 text-gray-800">
-                        WhatsApp Widget 项目
+                        WhatsApp Widget
                         <span className="text-sm font-normal text-gray-500 ml-3 bg-white px-3 py-1 rounded-full">
-                          React, TypeScript, Ant Design, CSS-in-JS, Google Tag Manager
+                          React, TypeScript, Ant Design, Google Tag Manager
                         </span>
                       </h4>
                       <div className="space-y-4">
                         <div>
                           <h5 className="font-semibold text-purple-600 mb-2">项目概述</h5>
                           <p className="text-gray-700 leading-relaxed">
-                            开发了一个高度可配置的 WhatsApp
-                            聊天小部件，可轻松嵌入任何网站。该组件支持品牌定制、响应式设计，并已作为
-                            NPM 包发布，同时支持通过 Google Tag Manager 快速部署。
+                            开发了一个高度可配置的WhatsApp聊天组件，支持品牌定制和响应式设计，已发布为NPM包并支持GTM快速部署。
                           </p>
                         </div>
                         <div>
                           <h5 className="font-semibold text-purple-600 mb-2">核心功能</h5>
                           <ul className="space-y-2 text-gray-700">
                             <li className="leading-relaxed">
-                              • 提供可嵌入的 WhatsApp 聊天按钮和对话框，支持直接对话
+                              • 提供可嵌入的WhatsApp聊天按钮和对话框，支持品牌定制
                             </li>
                             <li className="leading-relaxed">
-                              • 支持品牌定制，包括品牌图片、欢迎文本等个性化设置
+                              • 发布为NPM包并集成Google Tag Manager，实现一键部署
                             </li>
-                            <li className="leading-relaxed">
-                              • 完整的响应式设计，确保在各种设备上的最佳显示效果
-                            </li>
-                            <li className="leading-relaxed">
-                              • 提供丰富的配置选项，包括位置、颜色、文本等自定义设置
-                            </li>
-                          </ul>
-                        </div>
-                        <div>
-                          <h5 className="font-semibold text-purple-600 mb-2">部署方案</h5>
-                          <ul className="space-y-2 text-gray-700">
-                            <li className="leading-relaxed">
-                              • 发布为 NPM 包 (@aimer2024/wati-widget)，支持快速安装使用
-                            </li>
-                            <li className="leading-relaxed">
-                              • 集成 Google Tag Manager，方便网站管理员一键部署
-                            </li>
-                            <li className="leading-relaxed">
-                              • 提供完整的文档和使用示例，降低接入门槛
-                            </li>
-                          </ul>
-                        </div>
-                        <div>
-                          <h5 className="font-semibold text-purple-600 mb-2">项目成效</h5>
-                          <ul className="space-y-2 text-gray-700">
                             <li className="leading-relaxed">
                               • 成功应用于多个客户网站，显著提升用户转化率
-                            </li>
-                            <li className="leading-relaxed">
-                              • 通过 NPM 包形式实现快速部署，提高了产品交付效率
-                            </li>
-                            <li className="leading-relaxed">
-                              • 获得客户好评，成为公司标准产品组件之一
                             </li>
                           </ul>
                         </div>
@@ -490,7 +390,7 @@ const App = () => {
                               target="_blank"
                               rel="noopener noreferrer"
                             >
-                              查看 NPM 包
+                              查看NPM包
                             </a>
                           </div>
                         </div>
