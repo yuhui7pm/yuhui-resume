@@ -25,7 +25,14 @@ const App = () => {
                   </div>
                   <div className="flex items-center gap-2">
                     <i className="i-mdi-email text-purple-200"></i>
-                    <span>1176951680@qq.com</span>
+                    <a
+                      href="mailto:1176951680@qq.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-purple-200 transition-colors"
+                    >
+                      1176951680@qq.com
+                    </a>
                   </div>
                 </div>
               </div>
@@ -401,7 +408,7 @@ const App = () => {
                       <h4 className="font-bold text-lg mb-3 text-gray-800">
                         智能建筑设计系统
                         <span className="text-sm font-normal text-gray-500 ml-2">
-                          React18, TypeScript, Fanc.js, Antd
+                          React18, TypeScript, Fabric.js, Antd
                         </span>
                       </h4>
                       <div className="space-y-4">
