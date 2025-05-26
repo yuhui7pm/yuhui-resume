@@ -255,10 +255,7 @@ const App = () => {
                               • 采用Module Federation实现微前端架构，优化首屏渲染从10s降至5s
                             </li>
                             <li className="leading-relaxed">
-                              • 使用Redux + Redux-Saga管理复杂的应用状态，实现可预测的数据流
-                            </li>
-                            <li className="leading-relaxed">
-                              • 基于Material-UI开发现代化界面，使用Styled-Components实现主题定制
+                              • 将所有静态资源迁移至Google Cloud Storage，优化全球资源加载速度
                             </li>
                           </ul>
                         </div>
@@ -266,13 +263,19 @@ const App = () => {
                           <h5 className="font-semibold text-purple-600 mb-2">工程化实践</h5>
                           <ul className="space-y-2 text-gray-700">
                             <li className="leading-relaxed">
-                              • 建立完整代码规范体系，引入ESLint、Stylelint和Jest测试框架
+                              • 主导项目TypeScript改造，完成全部代码类型定义，提升代码可维护性
+                            </li>
+                            <li className="leading-relaxed">
+                              • 添加并配置Stylelint，完成全部历史代码规范化，统一样式开发规范
+                            </li>
+                            <li className="leading-relaxed">
+                              • 编写ESLint规则实现Styled-Components命名规范化，提升组件可维护性
+                            </li>
+                            <li className="leading-relaxed">
+                              • 自定义Stylelint规则，将px单位自动转换为CSS变量，统一设计规范
                             </li>
                             <li className="leading-relaxed">
                               • 接入Crowdin翻译系统，实现多语言版本的自动化管理
-                            </li>
-                            <li className="leading-relaxed">
-                              • 集成性能监控和错误追踪系统，提升应用稳定性
                             </li>
                           </ul>
                         </div>
