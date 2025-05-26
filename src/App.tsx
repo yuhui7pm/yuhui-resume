@@ -163,34 +163,34 @@ const App = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50 py-12 px-4 font-sans">
-      <div className="container mx-auto" style={{ maxWidth: '1000px' }}>
+    <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50 py-4 md:py-6 px-4 font-sans">
+      <div className="container mx-auto max-w-full md:max-w-[1000px]">
         <div
           id="resume"
-          className="bg-white rounded-3xl shadow-2xl overflow-hidden transition-all duration-300 hover:shadow-3xl"
+          className="bg-white rounded-3xl shadow-2xl overflow-hidden transition-all duration-300 hover:shadow-3xl w-full"
         >
           {/* 顶部个人信息区域 */}
-          <div className="bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-600 p-10 text-white relative overflow-hidden">
+          <div className="bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-600 p-4 md:p-10 text-white relative overflow-hidden">
             <div className="absolute inset-0 bg-[url('/yuhui-resume/pattern.svg')] opacity-10"></div>
-            <div className="flex items-center gap-10 relative z-10">
+            <div className="flex flex-col md:flex-row items-center gap-4 md:gap-10 relative z-10">
               <img
                 src="/yuhui-resume/images/yuhui.jpg"
                 alt="余晖"
-                className="w-44 h-44 rounded-2xl object-cover shadow-2xl border-4 border-white/30 transition-transform duration-300 hover:scale-105"
+                className="w-32 h-32 md:w-44 md:h-44 rounded-2xl object-cover shadow-2xl border-4 border-white/30 transition-transform duration-300 hover:scale-105"
               />
               <div>
-                <h1 className="text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-white to-purple-200 font-title">
+                <h1 className="text-3xl md:text-5xl font-bold mb-2 md:mb-4 bg-clip-text text-transparent bg-gradient-to-r from-white to-purple-200 font-title text-center md:text-left">
                   余晖
                 </h1>
-                <p className="text-2xl text-purple-100 mb-6 font-title">
+                <p className="text-xl md:text-2xl text-purple-100 mb-4 md:mb-6 font-title text-center md:text-left">
                   高级前端开发工程师 | 前端架构师
                 </p>
-                <div className="flex gap-8">
-                  <div className="flex items-center gap-3 group">
+                <div className="flex flex-col md:flex-row gap-4 md:gap-8">
+                  <div className="flex items-center gap-3 group justify-center md:justify-start">
                     <i className="i-mdi-phone text-2xl text-purple-200 group-hover:text-white transition-colors"></i>
                     <span className="group-hover:text-white transition-colors">15766495385</span>
                   </div>
-                  <div className="flex items-center gap-3 group">
+                  <div className="flex items-center gap-3 group justify-center md:justify-start">
                     <i className="i-mdi-email text-2xl text-purple-200 group-hover:text-white transition-colors"></i>
                     <a
                       href="mailto:1176951680@qq.com"
@@ -206,9 +206,9 @@ const App = () => {
             </div>
           </div>
 
-          <div className="flex gap-10 p-10">
+          <div className="flex flex-col md:flex-row gap-6 md:gap-10 p-4 md:p-10">
             {/* 左侧信息 */}
-            <div className="w-1/3 space-y-8">
+            <div className="w-full md:w-1/3 space-y-8">
               <section className="transform transition-all duration-300 hover:translate-x-2">
                 <h2 className="text-2xl font-bold mb-6 text-gray-800 border-b-2 border-purple-200 pb-2 flex items-center">
                   <i className="i-mdi-account-details mr-3 text-2xl text-purple-600"></i>基本信息
@@ -302,43 +302,45 @@ const App = () => {
             {/* 右侧工作经验 */}
             <div className="flex-1">
               <section>
-                <h2 className="text-2xl font-bold mb-8 text-gray-800 border-b-2 border-purple-200 pb-2 flex items-center">
+                <h2 className="text-xl md:text-2xl font-bold mb-6 md:mb-8 text-gray-800 border-b-2 border-purple-200 pb-2 flex items-center">
                   <i className="i-mdi-briefcase mr-3 text-2xl text-purple-600"></i>工作经验
                 </h2>
 
                 {/* WATI */}
-                <div className="mb-12 relative pl-8 border-l-2 border-purple-200 company-section">
+                <div className="mb-8 md:mb-12 relative pl-8 border-l-2 border-purple-200 company-section">
                   <div className="absolute w-5 h-5 bg-purple-600 rounded-full -left-[11px] top-0 shadow-lg"></div>
-                  <div className="mb-6">
-                    <div className="flex justify-between items-center">
-                      <h3 className="text-2xl font-bold text-gray-800 hover:text-purple-600 transition-colors">
+                  <div className="mb-4 md:mb-6">
+                    <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-2 md:gap-0">
+                      <h3 className="text-xl md:text-2xl font-bold text-gray-800 hover:text-purple-600 transition-colors">
                         WATI
                       </h3>
-                      <span className="text-purple-600 font-medium px-4 py-1 bg-purple-50 rounded-full">
+                      <span className="text-purple-600 font-medium px-4 py-1 bg-purple-50 rounded-full text-sm md:text-base">
                         2024.06 - 至今
                       </span>
                     </div>
                     <p className="text-gray-600 mt-2 font-medium">前端负责人 | 前端架构师</p>
                   </div>
 
-                  <div className="space-y-8">
-                    <div className="bg-gradient-to-br from-gray-50 to-purple-50 rounded-2xl p-8 shadow-sm hover:shadow-md transition-all duration-300">
-                      <h4 className="font-bold text-xl mb-4 text-gray-800">
-                        WATI前端应用项目
-                        <span className="text-sm font-normal text-gray-500 ml-3 bg-white px-3 py-1 rounded-full">
-                          React 18, TypeScript, Redux, Redux-Saga, MUI, Styled-Components, Vite
+                  <div className="space-y-6 md:space-y-8">
+                    <div className="bg-gradient-to-br from-gray-50 to-purple-50 rounded-xl md:rounded-2xl p-4 md:p-8 shadow-sm hover:shadow-md transition-all duration-300">
+                      <h4 className="font-bold text-lg md:text-xl mb-3 md:mb-4 text-gray-800">
+                        EngageChat
+                        <span className="text-xs md:text-sm font-normal text-gray-500 ml-2 md:ml-3 bg-white px-2 md:px-3 py-1 rounded-full block md:inline-block mt-2 md:mt-0">
+                          React, TypeScript, Styled-Components, Ant Design
                         </span>
                       </h4>
-                      <div className="space-y-4">
+                      <div className="space-y-3 md:space-y-4">
                         <div>
-                          <h5 className="font-semibold text-purple-600 mb-2">项目概述</h5>
-                          <p className="text-gray-700 leading-relaxed">
+                          <h5 className="font-semibold text-purple-600 mb-1 md:mb-2">项目概述</h5>
+                          <p className="text-sm md:text-base text-gray-700 leading-relaxed">
                             作为企业级SaaS应用的前端负责人，主导了从Webpack迁移至Vite的技术升级，采用微前端架构提升团队协作效率。项目使用TypeScript进行开发，确保了代码的类型安全和可维护性。
                           </p>
                         </div>
                         <div>
-                          <h5 className="font-semibold text-purple-600 mb-2">技术架构优化</h5>
-                          <ul className="space-y-2 text-gray-700">
+                          <h5 className="font-semibold text-purple-600 mb-1 md:mb-2">
+                            技术架构优化
+                          </h5>
+                          <ul className="space-y-1 md:space-y-2 text-sm md:text-base text-gray-700">
                             <li className="leading-relaxed">
                               • 主导Webpack迁移至Vite，开发启动速度提升5倍，CI/CD构建速度提升50%
                             </li>
@@ -351,8 +353,8 @@ const App = () => {
                           </ul>
                         </div>
                         <div>
-                          <h5 className="font-semibold text-purple-600 mb-2">工程化实践</h5>
-                          <ul className="space-y-2 text-gray-700">
+                          <h5 className="font-semibold text-purple-600 mb-1 md:mb-2">工程化实践</h5>
+                          <ul className="space-y-1 md:space-y-2 text-sm md:text-base text-gray-700">
                             <li className="leading-relaxed">
                               • 主导项目TypeScript改造，完成全部代码类型定义，提升代码可维护性
                             </li>
@@ -371,8 +373,8 @@ const App = () => {
                           </ul>
                         </div>
                         <div>
-                          <h5 className="font-semibold text-purple-600 mb-2">团队管理</h5>
-                          <ul className="space-y-2 text-gray-700">
+                          <h5 className="font-semibold text-purple-600 mb-1 md:mb-2">团队管理</h5>
+                          <ul className="space-y-1 md:space-y-2 text-sm md:text-base text-gray-700">
                             <li className="leading-relaxed">
                               • 负责团队管理和技术培训，建立完善的代码审查流程
                             </li>
@@ -382,61 +384,11 @@ const App = () => {
                           </ul>
                         </div>
                         <div>
-                          <h5 className="font-semibold text-purple-600 mb-2">项目链接</h5>
-                          <div className="space-y-2">
-                            <a
-                              href="https://www.figma.com/design/eP3gMKPnFZIygaCXqvjHEn/wati-forntend-app?node-id=0-1&t=lg9D1UVUvIvEpcbb-1"
-                              className="block text-blue-600 hover:underline"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                            >
-                              查看主平台作品集
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="bg-gradient-to-br from-gray-50 to-purple-50 rounded-2xl p-8 shadow-sm hover:shadow-md transition-all duration-300">
-                      <h4 className="font-bold text-xl mb-4 text-gray-800">
-                        Astra Landing Page
-                        <span className="text-sm font-normal text-gray-500 ml-3 bg-white px-3 py-1 rounded-full">
-                          React 18, TypeScript, Vite, Ant Design, Less, i18next
-                        </span>
-                      </h4>
-                      <div className="space-y-4">
-                        <div>
-                          <h5 className="font-semibold text-purple-600 mb-2">项目概述</h5>
-                          <p className="text-gray-700 leading-relaxed">
-                            独立开发的企业官网落地页项目，采用现代化技术栈，实现响应式设计、多语言支持和主题切换功能。
-                          </p>
-                        </div>
-                        <div>
-                          <h5 className="font-semibold text-purple-600 mb-2">核心工作</h5>
-                          <ul className="space-y-2 text-gray-700">
-                            <li className="leading-relaxed">
-                              • 基于React 18和TypeScript构建，使用Vite提升开发体验
-                            </li>
-                            <li className="leading-relaxed">
-                              • 使用i18next实现多语言切换，支持自动检测用户语言
-                            </li>
-                            <li className="leading-relaxed">
-                              • 通过CSS变量实现极简白和暗黑主题无缝切换
-                            </li>
-                            <li className="leading-relaxed">
-                              • 采用移动优先设计，完美适配手机和PC端显示
-                            </li>
-                            <li className="leading-relaxed">
-                              • 完整的工程化配置和Docker容器化部署
-                            </li>
-                          </ul>
-                        </div>
-                        <div>
-                          <h5 className="font-semibold text-purple-600 mb-2">项目链接</h5>
-                          <div className="space-y-2">
+                          <h5 className="font-semibold text-purple-600 mb-1 md:mb-2">项目链接</h5>
+                          <div className="space-y-1 md:space-y-2">
                             <a
                               href="https://www.engagechat.ai/"
-                              className="block text-blue-600 hover:underline"
+                              className="block text-sm md:text-base text-blue-600 hover:underline"
                               target="_blank"
                               rel="noopener noreferrer"
                             >
@@ -447,46 +399,34 @@ const App = () => {
                       </div>
                     </div>
 
-                    <div className="bg-gradient-to-br from-gray-50 to-purple-50 rounded-2xl p-8 shadow-sm hover:shadow-md transition-all duration-300">
-                      <h4 className="font-bold text-xl mb-4 text-gray-800">
+                    <div className="bg-gradient-to-br from-gray-50 to-purple-50 rounded-xl md:rounded-2xl p-4 md:p-8 shadow-sm hover:shadow-md transition-all duration-300">
+                      <h4 className="font-bold text-lg md:text-xl mb-3 md:mb-4 text-gray-800">
                         WhatsApp Widget
-                        <span className="text-sm font-normal text-gray-500 ml-3 bg-white px-3 py-1 rounded-full">
+                        <span className="text-xs md:text-sm font-normal text-gray-500 ml-2 md:ml-3 bg-white px-2 md:px-3 py-1 rounded-full block md:inline-block mt-2 md:mt-0">
                           React, TypeScript, Ant Design, Google Tag Manager
                         </span>
                       </h4>
-                      <div className="space-y-4">
+                      <div className="space-y-3 md:space-y-4">
                         <div>
-                          <h5 className="font-semibold text-purple-600 mb-2">项目概述</h5>
-                          <p className="text-gray-700 leading-relaxed">
-                            开发了一个高度可配置的WhatsApp聊天组件，支持品牌定制和响应式设计，已发布为NPM包并支持GTM快速部署。
+                          <h5 className="font-semibold text-purple-600 mb-1 md:mb-2">项目描述</h5>
+                          <p className="text-sm md:text-base text-gray-700 leading-relaxed">
+                            负责WhatsApp
+                            Widget项目的开发和维护，实现了一个轻量级的WhatsApp聊天组件。该组件可以轻松嵌入到任何网站中，提供即时通讯功能。项目采用React和TypeScript开发，确保了代码的可维护性和类型安全。
                           </p>
                         </div>
                         <div>
-                          <h5 className="font-semibold text-purple-600 mb-2">核心功能</h5>
-                          <ul className="space-y-2 text-gray-700">
+                          <h5 className="font-semibold text-purple-600 mb-1 md:mb-2">核心功能</h5>
+                          <ul className="space-y-1 md:space-y-2 text-sm md:text-base text-gray-700">
                             <li className="leading-relaxed">
-                              • 提供可嵌入的WhatsApp聊天按钮和对话框，支持品牌定制
+                              • 实现了自定义主题功能，支持品牌定制化
                             </li>
                             <li className="leading-relaxed">
-                              • 发布为NPM包并集成Google Tag Manager，实现一键部署
+                              • 集成Google Tag Manager，实现用户行为追踪
                             </li>
                             <li className="leading-relaxed">
-                              • 成功应用于多个客户网站，显著提升用户转化率
+                              • 优化组件加载性能，首屏加载时间控制在1s以内
                             </li>
                           </ul>
-                        </div>
-                        <div>
-                          <h5 className="font-semibold text-purple-600 mb-2">项目链接</h5>
-                          <div className="space-y-2">
-                            <a
-                              href="https://www.npmjs.com/package/@aimer2024/wati-widget"
-                              className="block text-blue-600 hover:underline"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                            >
-                              查看NPM包
-                            </a>
-                          </div>
                         </div>
                       </div>
                     </div>
@@ -494,38 +434,37 @@ const App = () => {
                 </div>
 
                 {/* 深圳云九易科技有限公司 */}
-                <div className="mb-12 relative pl-8 border-l-2 border-purple-200 company-section">
+                <div className="mb-8 md:mb-12 relative pl-8 border-l-2 border-purple-200 company-section">
                   <div className="absolute w-5 h-5 bg-purple-600 rounded-full -left-[11px] top-0 shadow-lg"></div>
-                  <div className="mb-6">
-                    <div className="flex justify-between items-center">
-                      <h3 className="text-2xl font-bold text-gray-800 hover:text-purple-600 transition-colors">
+                  <div className="mb-4 md:mb-6">
+                    <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-2 md:gap-0">
+                      <h3 className="text-xl md:text-2xl font-bold text-gray-800 hover:text-purple-600 transition-colors">
                         深圳云九易科技有限公司
                       </h3>
-                      <span className="text-purple-600 font-medium px-4 py-1 bg-purple-50 rounded-full">
+                      <span className="text-purple-600 font-medium px-4 py-1 bg-purple-50 rounded-full text-sm md:text-base">
                         2023.04 - 2024.06
                       </span>
                     </div>
                     <p className="text-gray-600 mt-2 font-medium">前端负责人</p>
                   </div>
 
-                  <div className="space-y-8">
-                    {/* Project cards with enhanced styling */}
-                    <div className="bg-gradient-to-br from-gray-50 to-purple-50 rounded-2xl p-8 shadow-sm hover:shadow-md transition-all duration-300">
-                      <h4 className="font-bold text-xl mb-4 text-gray-800">
-                        VDD游戏平台
-                        <span className="text-sm font-normal text-gray-500 ml-3 bg-white px-3 py-1 rounded-full">
-                          Vue3, TypeScript, Pixi.js, Antd, Vant, Matter.js, Howler.js
+                  <div className="space-y-6 md:space-y-8">
+                    <div className="bg-gradient-to-br from-gray-50 to-purple-50 rounded-xl md:rounded-2xl p-4 md:p-8 shadow-sm hover:shadow-md transition-all duration-300">
+                      <h4 className="font-bold text-lg md:text-xl mb-3 md:mb-4 text-gray-800">
+                        企业级SaaS应用
+                        <span className="text-xs md:text-sm font-normal text-gray-500 ml-2 md:ml-3 bg-white px-2 md:px-3 py-1 rounded-full block md:inline-block mt-2 md:mt-0">
+                          Vue3, TypeScript, Element Plus, Vite
                         </span>
                       </h4>
-                      <div className="space-y-4">
+                      <div className="space-y-3 md:space-y-4">
                         <div>
-                          <h5 className="font-semibold text-purple-600 mb-2">业务功能</h5>
-                          <p className="text-gray-700 leading-relaxed">
+                          <h5 className="font-semibold text-purple-600 mb-1 md:mb-2">业务功能</h5>
+                          <p className="text-sm md:text-base text-gray-700 leading-relaxed">
                             作为核心开发者，主导开发了16个小游戏及其生态系统，实现了从0到1的完整构建。项目采用模块化设计，包含游戏核心引擎、用户交互界面、数据分析系统等关键模块。通过Canvas技术实现高性能渲染，打造沉浸式游戏体验，并集成完整的数据分析和可视化功能。
                           </p>
                         </div>
                         <div>
-                          <h5 className="font-semibold text-purple-600 mb-2">技术亮点</h5>
+                          <h5 className="font-semibold text-purple-600 mb-1 md:mb-2">技术亮点</h5>
                           <div className="space-y-3">
                             <div>
                               <p className="font-medium text-gray-800 mb-1">技术架构：</p>
