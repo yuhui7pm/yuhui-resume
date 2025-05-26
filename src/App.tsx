@@ -233,12 +233,20 @@ const App = () => {
                   <div className="space-y-8">
                     <div className="bg-gradient-to-br from-gray-50 to-purple-50 rounded-2xl p-8 shadow-sm hover:shadow-md transition-all duration-300">
                       <h4 className="font-bold text-xl mb-4 text-gray-800">
-                        WATI主平台项目
+                        WATI前端应用项目
                         <span className="text-sm font-normal text-gray-500 ml-3 bg-white px-3 py-1 rounded-full">
-                          React, TypeScript, Vite, Styled-Components, Crowdin
+                          React 18, TypeScript, Redux, Redux-Saga, MUI, Styled-Components, Vite,
+                          Jest
                         </span>
                       </h4>
                       <div className="space-y-4">
+                        <div>
+                          <h5 className="font-semibold text-purple-600 mb-2">项目概述</h5>
+                          <p className="text-gray-700 leading-relaxed">
+                            作为一个企业级SaaS应用的前端开发项目，采用现代化的微前端架构（Module
+                            Federation），实现了高度可扩展和可维护的代码库。项目使用TypeScript进行开发，确保了代码的类型安全和可维护性。
+                          </p>
+                        </div>
                         <div>
                           <h5 className="font-semibold text-purple-600 mb-2">技术架构优化</h5>
                           <ul className="space-y-2 text-gray-700">
@@ -247,24 +255,42 @@ const App = () => {
                               主导项目从Webpack迁移至Vite，开发启动速度提升5倍，CI/CD构建速度提升50%
                             </li>
                             <li className="leading-relaxed">
+                              • 采用Module Federation实现微前端架构，提高代码复用性和团队协作效率
+                            </li>
+                            <li className="leading-relaxed">
+                              • 使用Redux +
+                              Redux-Saga管理复杂的应用状态和异步操作，实现可预测的数据流
+                            </li>
+                            <li className="leading-relaxed">
                               • 优化首屏渲染性能，通过代码分割、懒加载等策略将加载时间从10s降至5s
                             </li>
                             <li className="leading-relaxed">
-                              • 实现微前端架构，提升业务模块的独立开发和部署效率
-                            </li>
-                            <li className="leading-relaxed">
-                              • 将前端资源迁移至Google File Storage，优化资源加载性能
+                              • 集成性能监控和错误追踪系统，提升应用稳定性
                             </li>
                           </ul>
                         </div>
                         <div>
-                          <h5 className="font-semibold text-purple-600 mb-2">规范化建设</h5>
+                          <h5 className="font-semibold text-purple-600 mb-2">UI/UX实现</h5>
                           <ul className="space-y-2 text-gray-700">
                             <li className="leading-relaxed">
-                              • 引入并配置Stylelint，制定CSS样式规范，实现CSS变量的统一管理
+                              • 基于Material-UI (MUI)组件库开发现代化用户界面
                             </li>
                             <li className="leading-relaxed">
-                              • 推进项目TypeScript改造，显著提升代码质量和开发效率
+                              • 使用Styled-Components实现可维护和可扩展的样式系统
+                            </li>
+                            <li className="leading-relaxed">
+                              • 支持多语言国际化(i18n)和主题定制功能
+                            </li>
+                          </ul>
+                        </div>
+                        <div>
+                          <h5 className="font-semibold text-purple-600 mb-2">质量保证</h5>
+                          <ul className="space-y-2 text-gray-700">
+                            <li className="leading-relaxed">
+                              • 引入并配置ESLint、Stylelint，制定代码规范，确保代码质量和一致性
+                            </li>
+                            <li className="leading-relaxed">
+                              • 实现完整的单元测试和集成测试（Jest），提升代码可靠性
                             </li>
                             <li className="leading-relaxed">
                               • 规范化Styled-Components命名规则，提升组件可维护性
@@ -297,6 +323,9 @@ const App = () => {
                             <li className="leading-relaxed">
                               • 规范化建设显著提升代码质量和团队协作效率
                             </li>
+                            <li className="leading-relaxed">
+                              • 完整的TypeScript支持，提供了强类型保证，降低线上错误率
+                            </li>
                           </ul>
                         </div>
                         <div>
@@ -317,31 +346,47 @@ const App = () => {
 
                     <div className="bg-gradient-to-br from-gray-50 to-purple-50 rounded-2xl p-8 shadow-sm hover:shadow-md transition-all duration-300">
                       <h4 className="font-bold text-xl mb-4 text-gray-800">
-                        AI产品落地页 & POC展示页面
+                        Astra Landing Page
                         <span className="text-sm font-normal text-gray-500 ml-3 bg-white px-3 py-1 rounded-full">
-                          React, TailwindCSS, 响应式设计
+                          React 18, TypeScript, Vite 6, Ant Design 5.x, Less, i18next
                         </span>
                       </h4>
                       <div className="space-y-4">
                         <div>
-                          <h5 className="font-semibold text-purple-600 mb-2">主要功能</h5>
+                          <h5 className="font-semibold text-purple-600 mb-2">项目概述</h5>
+                          <p className="text-gray-700 leading-relaxed">
+                            独立开发并维护的现代化企业官网落地页项目，采用最新的前端技术栈构建，实现了响应式设计和国际化支持，确保了良好的用户体验和性能表现。
+                          </p>
+                        </div>
+                        <div>
+                          <h5 className="font-semibold text-purple-600 mb-2">技术实现</h5>
                           <ul className="space-y-2 text-gray-700">
                             <li className="leading-relaxed">
-                              • 开发AI产品落地页，实现暗黑和极白主题切换，完美适配PC和移动端
+                              • 基于React 18 + TypeScript + Vite 6构建，采用现代化的开发方案
                             </li>
                             <li className="leading-relaxed">
-                              • 设计并实现客户POC展示页面，提供直观的产品功能演示
+                              • 使用Ant Design 5.x组件库，结合Less预处理器实现统一的设计风格
+                            </li>
+                            <li className="leading-relaxed">
+                              •
+                              集成i18next实现多语言支持，配合i18next-browser-languagedetector实现自动语言检测
+                            </li>
+                            <li className="leading-relaxed">
+                              • 采用模块化的目录结构，使用Context API进行状态管理
                             </li>
                           </ul>
                         </div>
                         <div>
-                          <h5 className="font-semibold text-purple-600 mb-2">技术亮点</h5>
+                          <h5 className="font-semibold text-purple-600 mb-2">工程化实践</h5>
                           <ul className="space-y-2 text-gray-700">
                             <li className="leading-relaxed">
-                              • 采用CSS变量和TailwindCSS实现主题切换，确保视觉一致性
+                              • 实现完整的代码规范体系，集成ESLint + Prettier + StyleLint
                             </li>
                             <li className="leading-relaxed">
-                              • 使用响应式设计和移动优先策略，实现多端完美适配
+                              • 使用Husky配合Commitlint规范代码提交信息
+                            </li>
+                            <li className="leading-relaxed">
+                              • 使用Docker容器化部署，配置Vite优化打包性能
                             </li>
                           </ul>
                         </div>
@@ -351,7 +396,77 @@ const App = () => {
                             <li className="leading-relaxed">
                               • 产品页面转化率提升30%，用户体验显著改善
                             </li>
+                            <li className="leading-relaxed">
+                              • 建立了规范的前端开发流程和工程化体系
+                            </li>
+                            <li className="leading-relaxed">
+                              • 通过模块化设计提高了代码复用率和可维护性
+                            </li>
+                          </ul>
+                        </div>
+                        <div>
+                          <h5 className="font-semibold text-purple-600 mb-2">项目链接</h5>
+                          <div className="space-y-2">
+                            <a
+                              href="https://www.engagechat.ai/"
+                              className="block text-blue-600 hover:underline"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              查看落地页
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="bg-gradient-to-br from-gray-50 to-purple-50 rounded-2xl p-8 shadow-sm hover:shadow-md transition-all duration-300">
+                      <h4 className="font-bold text-xl mb-4 text-gray-800">
+                        POC展示页面
+                        <span className="text-sm font-normal text-gray-500 ml-3 bg-white px-3 py-1 rounded-full">
+                          React 18, TypeScript, TailwindCSS, 响应式设计
+                        </span>
+                      </h4>
+                      <div className="space-y-4">
+                        <div>
+                          <h5 className="font-semibold text-purple-600 mb-2">项目概述</h5>
+                          <p className="text-gray-700 leading-relaxed">
+                            为潜在客户定制开发的产品概念验证展示页面，通过直观的界面展示产品核心功能和价值主张，帮助客户快速理解产品特性。
+                          </p>
+                        </div>
+                        <div>
+                          <h5 className="font-semibold text-purple-600 mb-2">技术实现</h5>
+                          <ul className="space-y-2 text-gray-700">
+                            <li className="leading-relaxed">
+                              • 使用React 18和TypeScript确保代码质量和类型安全
+                            </li>
+                            <li className="leading-relaxed">
+                              • 采用TailwindCSS实现快速响应式布局和主题定制
+                            </li>
+                            <li className="leading-relaxed">
+                              • 实现组件的高度复用和解耦，提高开发效率
+                            </li>
+                          </ul>
+                        </div>
+                        <div>
+                          <h5 className="font-semibold text-purple-600 mb-2">项目特点</h5>
+                          <ul className="space-y-2 text-gray-700">
+                            <li className="leading-relaxed">
+                              • 针对不同客户需求，实现快速定制和部署
+                            </li>
+                            <li className="leading-relaxed">
+                              • 优化页面性能，确保快速加载和流畅交互
+                            </li>
+                            <li className="leading-relaxed">• 支持多端适配，提供一致的用户体验</li>
+                          </ul>
+                        </div>
+                        <div>
+                          <h5 className="font-semibold text-purple-600 mb-2">项目成效</h5>
+                          <ul className="space-y-2 text-gray-700">
                             <li className="leading-relaxed">• POC页面帮助成功获取多个重要客户</li>
+                            <li className="leading-relaxed">
+                              • 显著提升了产品演示效果和客户转化率
+                            </li>
                           </ul>
                         </div>
                         <div>
@@ -363,15 +478,7 @@ const App = () => {
                               target="_blank"
                               rel="noopener noreferrer"
                             >
-                              客户POC页面
-                            </a>
-                            <a
-                              href="https://www.engagechat.ai/"
-                              className="block text-blue-600 hover:underline"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                            >
-                              AI产品落地页
+                              查看POC页面
                             </a>
                           </div>
                         </div>
