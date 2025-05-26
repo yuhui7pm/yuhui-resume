@@ -38,8 +38,8 @@ const App = () => {
 
   return (
     <div className="min-h-screen bg-gray-100 py-8">
-      <div className="container mx-auto px-4">
-        <div id="resume" className="bg-white rounded-lg shadow-md p-8 max-w-7xl mx-auto flex gap-8">
+      <div className="container mx-auto px-2 max-w-[1440px]">
+        <div id="resume" className="bg-white rounded-lg shadow-md p-6 mx-auto flex gap-8">
           {/* 左侧个人信息 */}
           <div className="w-1/4 bg-white">
             <div className="mb-8">
@@ -259,7 +259,70 @@ const App = () => {
                 </div>
                 <p className="text-gray-600 mb-4">高级前端开发工程师</p>
 
-                {/* 项目内容省略，按照相同结构添加 */}
+                {/* CAD审图工具项目 */}
+                <div className="mb-6">
+                  <h4 className="font-semibold mb-2">
+                    项目一：CAD审图工具 (React18, Ts, Pixi.js, Antd)
+                  </h4>
+                  <div className="space-y-4">
+                    <div>
+                      <h5 className="font-semibold">项目描述</h5>
+                      <p className="text-gray-700">
+                        实现多张CAD图纸的上传解析、编辑与审查等文等功能。首先，使用高性能的canvas库pixi.js，将10w+数量级的图元，根据几何类型的不同，调用相应的绘制方法，给制图元于画布上；并且，使用"RBush"和"碰撞检测"使得图元具有hover，selected，单选多选等交互，对于复杂交互，比如图元的增删回改操作，则是基于"事务"实现；另外，还实现图纸图元的层级感知，以及毫米到像素的单位换算功能；最后，对于一些无关画布的操作，比如注册登录，项目列展示，图元信息的显示与编辑，审查功能以及整体流程的串联，则是使用antd组件实现。
+                      </p>
+                    </div>
+                    <div>
+                      <h5 className="font-semibold">成果链接</h5>
+                      <div className="space-x-2">
+                        <a href="#" className="text-blue-600 hover:underline">
+                          查看作品集
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* 建筑单体设计工具项目 */}
+                <div className="mb-6">
+                  <h4 className="font-semibold mb-2">
+                    项目二：建筑单体设计工具 (React18, Ts, Fanc.js, Antd)
+                  </h4>
+                  <div className="space-y-4">
+                    <div>
+                      <h5 className="font-semibold">项目描述</h5>
+                      <p className="text-gray-700">
+                        该产品依托海量户型库和智能编辑能力，可快速便捷输出建筑单体设计图纸。本人主要负责产品的重要功能开发，比如：1.
+                        实现户型门门、窗、电梯、楼梯等构建"移、增、删、改、拖、摆拖、回退"等复杂操作；2.
+                        根据户型以及构建的几何信息，实时计算十余种不同的面积指标，并将对应的面积在上具象化；3.
+                        添加平面和楼栋输入信息面板，让用户在存储平面或者楼栋模板到标准材料库前，可以对平面或楼栋的诸多配置进行联动编辑；4.
+                        添加楼栋设置置面板，对楼栋中的平面进行"移、增、删、...."等交互；5.
+                        给制草图一键生成户型，设计师只需要按照放缩编辑不同尺寸，即可根据算法生成成熟的户型，该功能申请了专利，并且被许多同行抄袭模仿。6.
+                        项目主题色切换，根据根节点的自定义属性以及css变量，来切换不同主题。
+                      </p>
+                    </div>
+                    <div>
+                      <h5 className="font-semibold">成果链接</h5>
+                      <div className="space-x-2">
+                        <a href="#" className="text-blue-600 hover:underline">
+                          查看作品集
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* 管理平台项目 */}
+                <div>
+                  <h4 className="font-semibold mb-2">项目三：管理平台 (React18, Ts, Antd)</h4>
+                  <div className="space-y-4">
+                    <div>
+                      <h5 className="font-semibold">项目描述</h5>
+                      <p className="text-gray-700">
+                        项目管理平台的维护开发。比如添加设计工具的入口，展示设计项目信息，展示设计师的信息等。
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </div>
 
               {/* 深信服科技股份有限公司 */}
@@ -270,25 +333,49 @@ const App = () => {
                 </div>
                 <p className="text-gray-600 mb-4">初级前端开发工程师</p>
 
-                {/* 项目内容省略，按照相同结构添加 */}
+                <div className="mb-6">
+                  <h4 className="font-semibold mb-2">项目：管理平台 × n (Vue2, Ts, Ext)</h4>
+                  <div className="space-y-4">
+                    <div className="space-y-2">
+                      <p className="text-gray-700">
+                        1.
+                        使用Ext.js开发新版的"AF防火墙终端管理平台"以及"SD-WAN终端管理平台"，开发内容以表格表单为主。
+                      </p>
+                      <p className="text-gray-700">
+                        2.
+                        使用Vue框架开发BBC管理平台。该平台实现了对SDWAN设备进行监控、配置、管理等功能。页面内容多以表格、弹框、趋势图为主。使用的工具为我司内部研发的Vue组件库以及Highchart和Echart；并且使用NutUI实现移动端页面，使得用户的手机连接设备后台，可以配置硬件设备。
+                      </p>
+                      <p className="text-gray-700">
+                        3.
+                        Vue+ts重写的SDWAN的EXT项目，目的是为了解决新人难以入手Ext.js的问题。期间使用Vue-property-decorator来让Vue支持ts的写法，完成的内容和原SDWAN的功能保持一致。
+                      </p>
+                      <p className="text-gray-700">
+                        4.
+                        完成公司UEDC部门官网的市场城功能。使用Element组件库实现商品展示页，商品详情页面和购买功能；以及后台管理系统的用户信息评价页面和商品详情和购买完成页面；最后使用koa，sequelize，ts，mysql编写了对应的后端功能。
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </section>
           </div>
         </div>
 
         {/* 导出按钮 */}
-        <div className="flex justify-center mt-8 space-x-4">
+        <div className="fixed bottom-8 right-8 flex flex-col gap-4">
           <button
             onClick={exportToPDF}
-            className="bg-purple-600 hover:bg-purple-700 text-white px-6 py-2 rounded-md"
+            className="w-16 h-16 rounded-full bg-white hover:bg-purple-600 text-purple-600 hover:text-white flex items-center justify-center shadow-lg hover:scale-110 transition-all duration-300 ease-in-out"
+            title="导出PDF"
           >
-            导出PDF
+            <i className="i-mdi-file-pdf text-4xl"></i>
           </button>
           <button
             onClick={exportToWord}
-            className="bg-purple-600 hover:bg-purple-700 text-white px-6 py-2 rounded-md"
+            className="w-16 h-16 rounded-full bg-white hover:bg-purple-600 text-purple-600 hover:text-white flex items-center justify-center shadow-lg hover:scale-110 transition-all duration-300 ease-in-out"
+            title="导出Word"
           >
-            导出Word
+            <i className="i-mdi-microsoft-word text-4xl"></i>
           </button>
         </div>
       </div>
