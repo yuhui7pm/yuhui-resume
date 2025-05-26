@@ -4,7 +4,7 @@ const App = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50 py-12 px-4">
+    <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50 py-12 px-4 font-sans">
       <div className="container mx-auto" style={{ maxWidth: '1000px' }}>
         <div
           id="resume"
@@ -12,7 +12,7 @@ const App = () => {
         >
           {/* 顶部个人信息区域 */}
           <div className="bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-600 p-10 text-white relative overflow-hidden">
-            <div className="absolute inset-0 bg-[url('/pattern.svg')] opacity-10"></div>
+            <div className="absolute inset-0 bg-[url('/yuhui-resume/pattern.svg')] opacity-10"></div>
             <div className="flex items-center gap-10 relative z-10">
               <img
                 src="/yuhui-resume/images/yuhui.jpg"
@@ -20,10 +20,12 @@ const App = () => {
                 className="w-44 h-44 rounded-2xl object-cover shadow-2xl border-4 border-white/30 transition-transform duration-300 hover:scale-105"
               />
               <div>
-                <h1 className="text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-white to-purple-200">
+                <h1 className="text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-white to-purple-200 font-title">
                   余晖
                 </h1>
-                <p className="text-2xl text-purple-100 mb-6">高级前端开发工程师 | 前端架构师</p>
+                <p className="text-2xl text-purple-100 mb-6 font-title">
+                  高级前端开发工程师 | 前端架构师
+                </p>
                 <div className="flex gap-8">
                   <div className="flex items-center gap-3 group">
                     <i className="i-mdi-phone text-2xl text-purple-200 group-hover:text-white transition-colors"></i>
