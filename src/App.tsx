@@ -316,9 +316,9 @@ const App = () => {
 
                   <div className="space-y-6 md:space-y-8">
                     <div className="bg-gradient-to-br from-gray-50 to-purple-50 rounded-xl md:rounded-2xl p-4 md:p-8 shadow-sm hover:shadow-md transition-all duration-300">
-                      <h4 className="font-bold text-lg md:text-xl mb-3 md:mb-4 text-gray-800">
+                      <h4 className="font-bold text-xl mb-4 text-gray-800">
                         EngageChat
-                        <span className="text-xs md:text-sm font-normal text-gray-500 ml-2 md:ml-3 bg-white px-2 md:px-3 py-1 rounded-full block md:inline-block mt-2 md:mt-0">
+                        <span className="text-sm font-normal text-gray-500 ml-3 bg-white px-3 py-1 rounded-full">
                           React, TypeScript, Styled-Components, Ant Design
                         </span>
                       </h4>
@@ -393,9 +393,9 @@ const App = () => {
                     </div>
 
                     <div className="bg-gradient-to-br from-gray-50 to-purple-50 rounded-xl md:rounded-2xl p-4 md:p-8 shadow-sm hover:shadow-md transition-all duration-300">
-                      <h4 className="font-bold text-lg md:text-xl mb-3 md:mb-4 text-gray-800">
+                      <h4 className="font-bold text-xl mb-4 text-gray-800">
                         WhatsApp Widget
-                        <span className="text-xs md:text-sm font-normal text-gray-500 ml-2 md:ml-3 bg-white px-2 md:px-3 py-1 rounded-full block md:inline-block mt-2 md:mt-0">
+                        <span className="text-sm font-normal text-gray-500 ml-3 bg-white px-3 py-1 rounded-full">
                           React, TypeScript, Ant Design, Google Tag Manager
                         </span>
                       </h4>
