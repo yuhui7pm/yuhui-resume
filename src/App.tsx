@@ -293,27 +293,6 @@ const App = () => {
                             </li>
                           </ul>
                         </div>
-                        <div>
-                          <h5 className="font-semibold text-purple-600 mb-2">项目链接</h5>
-                          <div className="space-y-2">
-                            <a
-                              href="https://clareai.github.io/utm-web-site/"
-                              className="block text-blue-600 hover:underline"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                            >
-                              客户POC页面
-                            </a>
-                            <a
-                              href="https://www.engagechat.ai/"
-                              className="block text-blue-600 hover:underline"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                            >
-                              AI产品落地页
-                            </a>
-                          </div>
-                        </div>
                       </div>
                     </div>
 
@@ -367,6 +346,35 @@ const App = () => {
                               • 组件库覆盖率达到85%，大幅减少重复开发工作
                             </li>
                           </ul>
+                        </div>
+                        <div>
+                          <h5 className="font-semibold text-purple-600 mb-2">项目链接</h5>
+                          <div className="space-y-2">
+                            <a
+                              href="https://clareai.github.io/utm-web-site/"
+                              className="block text-blue-600 hover:underline"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              客户POC页面
+                            </a>
+                            <a
+                              href="https://www.engagechat.ai/"
+                              className="block text-blue-600 hover:underline"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              AI产品落地页
+                            </a>
+                            <a
+                              href="https://www.figma.com/design/eP3gMKPnFZIygaCXqvjHEn/wati-forntend-app?node-id=0-1&t=lg9D1UVUvIvEpcbb-1"
+                              className="block text-blue-600 hover:underline"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              查看产品功能作品集
+                            </a>
+                          </div>
                         </div>
                       </div>
                     </div>
