@@ -422,50 +422,62 @@ const App = () => {
 
                     <div className="bg-gradient-to-br from-gray-50 to-purple-50 rounded-2xl p-8 shadow-sm hover:shadow-md transition-all duration-300">
                       <h4 className="font-bold text-xl mb-4 text-gray-800">
-                        POC展示页面
+                        WhatsApp Widget 项目
                         <span className="text-sm font-normal text-gray-500 ml-3 bg-white px-3 py-1 rounded-full">
-                          React 18, TypeScript, TailwindCSS, 响应式设计
+                          React, TypeScript, Ant Design, CSS-in-JS, Google Tag Manager
                         </span>
                       </h4>
                       <div className="space-y-4">
                         <div>
                           <h5 className="font-semibold text-purple-600 mb-2">项目概述</h5>
                           <p className="text-gray-700 leading-relaxed">
-                            为潜在客户定制开发的产品概念验证展示页面，通过直观的界面展示产品核心功能和价值主张，帮助客户快速理解产品特性。
+                            开发了一个高度可配置的 WhatsApp
+                            聊天小部件，可轻松嵌入任何网站。该组件支持品牌定制、响应式设计，并已作为
+                            NPM 包发布，同时支持通过 Google Tag Manager 快速部署。
                           </p>
                         </div>
                         <div>
-                          <h5 className="font-semibold text-purple-600 mb-2">技术实现</h5>
+                          <h5 className="font-semibold text-purple-600 mb-2">核心功能</h5>
                           <ul className="space-y-2 text-gray-700">
                             <li className="leading-relaxed">
-                              • 使用React 18和TypeScript确保代码质量和类型安全
+                              • 提供可嵌入的 WhatsApp 聊天按钮和对话框，支持直接对话
                             </li>
                             <li className="leading-relaxed">
-                              • 采用TailwindCSS实现快速响应式布局和主题定制
+                              • 支持品牌定制，包括品牌图片、欢迎文本等个性化设置
                             </li>
                             <li className="leading-relaxed">
-                              • 实现组件的高度复用和解耦，提高开发效率
+                              • 完整的响应式设计，确保在各种设备上的最佳显示效果
+                            </li>
+                            <li className="leading-relaxed">
+                              • 提供丰富的配置选项，包括位置、颜色、文本等自定义设置
                             </li>
                           </ul>
                         </div>
                         <div>
-                          <h5 className="font-semibold text-purple-600 mb-2">项目特点</h5>
+                          <h5 className="font-semibold text-purple-600 mb-2">部署方案</h5>
                           <ul className="space-y-2 text-gray-700">
                             <li className="leading-relaxed">
-                              • 针对不同客户需求，实现快速定制和部署
+                              • 发布为 NPM 包 (@aimer2024/wati-widget)，支持快速安装使用
                             </li>
                             <li className="leading-relaxed">
-                              • 优化页面性能，确保快速加载和流畅交互
+                              • 集成 Google Tag Manager，方便网站管理员一键部署
                             </li>
-                            <li className="leading-relaxed">• 支持多端适配，提供一致的用户体验</li>
+                            <li className="leading-relaxed">
+                              • 提供完整的文档和使用示例，降低接入门槛
+                            </li>
                           </ul>
                         </div>
                         <div>
                           <h5 className="font-semibold text-purple-600 mb-2">项目成效</h5>
                           <ul className="space-y-2 text-gray-700">
-                            <li className="leading-relaxed">• POC页面帮助成功获取多个重要客户</li>
                             <li className="leading-relaxed">
-                              • 显著提升了产品演示效果和客户转化率
+                              • 成功应用于多个客户网站，显著提升用户转化率
+                            </li>
+                            <li className="leading-relaxed">
+                              • 通过 NPM 包形式实现快速部署，提高了产品交付效率
+                            </li>
+                            <li className="leading-relaxed">
+                              • 获得客户好评，成为公司标准产品组件之一
                             </li>
                           </ul>
                         </div>
@@ -473,12 +485,12 @@ const App = () => {
                           <h5 className="font-semibold text-purple-600 mb-2">项目链接</h5>
                           <div className="space-y-2">
                             <a
-                              href="https://clareai.github.io/utm-web-site/"
+                              href="https://www.npmjs.com/package/@aimer2024/wati-widget"
                               className="block text-blue-600 hover:underline"
                               target="_blank"
                               rel="noopener noreferrer"
                             >
-                              查看POC页面
+                              查看 NPM 包
                             </a>
                           </div>
                         </div>
