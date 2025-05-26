@@ -42,7 +42,13 @@ const App = () => {
                 <div className="space-y-3">
                   <div className="flex items-center gap-3">
                     <i className="i-mdi-clock text-purple-600"></i>
-                    <span className="text-gray-700">4年前端开发经验</span>
+                    <span className="text-gray-700">
+                      {Math.ceil(
+                        (new Date().getTime() - new Date('2020-06-01').getTime()) /
+                          (1000 * 60 * 60 * 24 * 365)
+                      )}
+                      年前端开发经验
+                    </span>
                   </div>
                   <div className="flex items-center gap-3">
                     <i className="i-mdi-school text-purple-600"></i>
