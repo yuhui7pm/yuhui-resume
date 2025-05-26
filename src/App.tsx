@@ -36,7 +36,7 @@ const App = () => {
             {/* 左侧信息 */}
             <div className="w-1/3 space-y-8">
               <section>
-                <h2 className="text-xl font-bold mb-4 text-gray-800 border-b-2 border-purple-200 pb-2">
+                <h2 className="text-2xl font-bold mb-6 text-gray-800 border-b-2 border-purple-200 pb-2">
                   <i className="i-mdi-account-details mr-2 text-purple-600"></i>基本信息
                 </h2>
                 <div className="space-y-3">
@@ -66,7 +66,7 @@ const App = () => {
               </section>
 
               <section>
-                <h2 className="text-xl font-bold mb-4 text-gray-800 border-b-2 border-purple-200 pb-2">
+                <h2 className="text-2xl font-bold mb-6 text-gray-800 border-b-2 border-purple-200 pb-2">
                   <i className="i-mdi-tools mr-2 text-purple-600"></i>专业技能
                 </h2>
                 <div className="space-y-4">
@@ -97,7 +97,7 @@ const App = () => {
               </section>
 
               <section>
-                <h2 className="text-xl font-bold mb-4 text-gray-800 border-b-2 border-purple-200 pb-2">
+                <h2 className="text-2xl font-bold mb-6 text-gray-800 border-b-2 border-purple-200 pb-2">
                   <i className="i-mdi-web mr-2 text-purple-600"></i>个人博客
                 </h2>
                 <div className="space-y-3">
