@@ -1,8 +1,9 @@
 interface LoadingModalProps {
   isVisible: boolean
+  message?: string
 }
 
-const LoadingModal = ({ isVisible }: LoadingModalProps) => {
+const LoadingModal = ({ isVisible, message = '请稍候，正在处理中...' }: LoadingModalProps) => {
   if (!isVisible) return null
 
   return (
@@ -24,7 +25,7 @@ const LoadingModal = ({ isVisible }: LoadingModalProps) => {
         {/* 加载文字 */}
         <div className="mt-8 text-center">
           <h3 className="text-2xl font-bold text-white mb-2 animate-pulse">正在导出简历...</h3>
-          <p className="text-purple-200 text-lg">请稍候，正在生成高质量图片</p>
+          <p className="text-purple-200 text-lg">{message}</p>
         </div>
 
         {/* 底部装饰点 */}

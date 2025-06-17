@@ -7,9 +7,17 @@ import ExportButton from './components/ExportButton'
 
 const App = () => {
   const [isExporting, setIsExporting] = useState(false)
+  const [exportMessage, setExportMessage] = useState('')
 
-  const handleExportStart = () => setIsExporting(true)
-  const handleExportEnd = () => setIsExporting(false)
+  const handleExportStart = (message: string = '请稍候，正在处理中...') => {
+    setExportMessage(message)
+    setIsExporting(true)
+  }
+
+  const handleExportEnd = () => {
+    setIsExporting(false)
+    setExportMessage('')
+  }
 
   return (
     <>
@@ -38,7 +46,7 @@ const App = () => {
 
       <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50 py-12 px-4 font-sans">
         {/* 全局Loading */}
-        <LoadingModal isVisible={isExporting} />
+        <LoadingModal isVisible={isExporting} message={exportMessage} />
 
         <div className="container mx-auto" style={{ maxWidth: '1000px' }}>
           <div

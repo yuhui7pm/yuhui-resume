@@ -1,7 +1,8 @@
 import * as htmlToImage from 'html-to-image'
+import html2pdf from 'html2pdf.js'
 
 interface ExportButtonProps {
-  onExportStart: () => void
+  onExportStart: (message?: string) => void
   onExportEnd: () => void
 }
 
@@ -10,7 +11,7 @@ const ExportButton = ({ onExportStart, onExportEnd }: ExportButtonProps) => {
     console.log('开始导出图片')
 
     // 显示loading
-    onExportStart()
+    onExportStart('请稍候，正在生成高质量图片')
 
     // 临时隐藏导出按钮
     const exportButtons = document.querySelector('.export-buttons')
@@ -121,6 +122,90 @@ const ExportButton = ({ onExportStart, onExportEnd }: ExportButtonProps) => {
     }
   }
 
+  const exportToPDF = async () => {
+    console.log('开始导出PDF')
+
+    // 显示loading
+    onExportStart('请稍候，正在生成PDF文件')
+
+    // 临时隐藏导出按钮
+    const exportButtons = document.querySelector('.export-buttons')
+    if (exportButtons) {
+      exportButtons.classList.add('hidden')
+    }
+
+    try {
+      const resumeElement = document.getElementById('resume')
+      if (!resumeElement) {
+        console.error('找不到简历元素')
+        return
+      }
+
+      // 保存原始样式和滚动位置
+      const originalScrollPos = window.scrollY
+      const originalStyle = resumeElement.style.cssText
+      const originalBodyStyle = document.body.style.cssText
+
+      // 准备导出环境
+      document.body.style.overflow = 'hidden'
+      document.body.style.margin = '0'
+      document.body.style.padding = '0'
+      document.body.style.background = '#ffffff'
+
+      // 设置临时样式以确保完整捕获
+      resumeElement.style.width = `${resumeElement.offsetWidth}px`
+      resumeElement.style.margin = '0 auto'
+      resumeElement.style.transform = 'none'
+      resumeElement.style.position = 'relative'
+      resumeElement.style.top = '0'
+      resumeElement.style.left = '0'
+      resumeElement.style.borderRadius = '0'
+      resumeElement.style.boxShadow = 'none'
+
+      // 滚动到顶部
+      window.scrollTo(0, 0)
+
+      // 等待样式和图片加载完成
+      await new Promise((resolve) => setTimeout(resolve, 1000))
+
+      // 配置PDF导出选项
+      const options = {
+        margin: 0.5,
+        filename: '余晖的简历.pdf',
+        image: { type: 'jpeg', quality: 0.98 },
+        html2canvas: {
+          scale: 2,
+          useCORS: true,
+          backgroundColor: '#ffffff',
+          logging: false,
+        },
+        jsPDF: {
+          unit: 'in',
+          format: 'a4',
+          orientation: 'portrait',
+        },
+      }
+
+      // 使用html2pdf导出PDF
+      await html2pdf().set(options).from(resumeElement).save()
+
+      // 恢复原始样式和滚动位置
+      resumeElement.style.cssText = originalStyle
+      document.body.style.cssText = originalBodyStyle
+      window.scrollTo(0, originalScrollPos)
+    } catch (error) {
+      console.error('导出PDF失败:', error)
+    } finally {
+      // 隐藏loading
+      onExportEnd()
+
+      // 恢复导出按钮显示
+      if (exportButtons) {
+        exportButtons.classList.remove('hidden')
+      }
+    }
+  }
+
   return (
     <div className="fixed bottom-8 right-8 flex flex-col gap-4 export-buttons">
       <button
@@ -129,6 +214,13 @@ const ExportButton = ({ onExportStart, onExportEnd }: ExportButtonProps) => {
         title="导出图片"
       >
         <i className="i-mdi-image text-3xl"></i>
+      </button>
+      <button
+        onClick={exportToPDF}
+        className="w-16 h-16 rounded-full bg-gradient-to-r from-red-600 to-pink-600 text-white flex items-center justify-center shadow-lg hover:scale-110 transition-all duration-300 ease-in-out hover:shadow-red-300"
+        title="导出PDF"
+      >
+        <i className="i-mdi-file-pdf text-3xl"></i>
       </button>
     </div>
   )
