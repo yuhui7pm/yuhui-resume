@@ -517,6 +517,20 @@ const ExportButton = ({ onExportStart, onExportEnd }: ExportButtonProps) => {
     }
   }
 
+  // 浏览器原生打印功能
+  const printToPDF = () => {
+    console.log('开始使用浏览器打印功能')
+
+    // 滚动到顶部
+    window.scrollTo(0, 0)
+
+    // 等待页面滚动完成后打开打印对话框
+    setTimeout(() => {
+      // 调用浏览器打印功能
+      window.print()
+    }, 100)
+  }
+
   return (
     <div className="fixed bottom-8 right-8 flex flex-col gap-4 export-buttons">
       <button
@@ -527,7 +541,7 @@ const ExportButton = ({ onExportStart, onExportEnd }: ExportButtonProps) => {
         <i className="i-mdi-image text-3xl"></i>
       </button>
       <button
-        onClick={exportToPDF}
+        onClick={printToPDF}
         className="w-16 h-16 rounded-full bg-gradient-to-r from-purple-600 to-indigo-600 text-white flex items-center justify-center shadow-lg hover:scale-110 transition-all duration-300 ease-in-out hover:shadow-purple-300"
         title="导出PDF"
       >
