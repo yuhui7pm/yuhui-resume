@@ -1,7 +1,7 @@
 const WatiProjects = () => {
   return (
     <div className="space-y-8">
-      <div className="bg-gradient-to-br from-gray-50 to-purple-50 rounded-2xl p-8 shadow-sm hover:shadow-md transition-all duration-300">
+      <div className="project-card bg-gradient-to-br from-gray-50 to-purple-50 rounded-2xl p-8 shadow-sm hover:shadow-md transition-all duration-300">
         <h4 className="font-bold text-xl mb-4 text-gray-800">
           WATI前端应用项目
           <span className="text-sm font-normal text-gray-500 ml-3 bg-white px-3 py-1 rounded-full">
@@ -70,7 +70,7 @@ const WatiProjects = () => {
         </div>
       </div>
 
-      <div className="bg-gradient-to-br from-gray-50 to-purple-50 rounded-2xl p-8 shadow-sm hover:shadow-md transition-all duration-300">
+      <div className="project-card bg-gradient-to-br from-gray-50 to-purple-50 rounded-2xl p-8 shadow-sm hover:shadow-md transition-all duration-300">
         <h4 className="font-bold text-xl mb-4 text-gray-800">
           Astra Landing Page
           <span className="text-sm font-normal text-gray-500 ml-3 bg-white px-3 py-1 rounded-full">
@@ -112,7 +112,7 @@ const WatiProjects = () => {
         </div>
       </div>
 
-      <div className="bg-gradient-to-br from-gray-50 to-purple-50 rounded-2xl p-8 shadow-sm hover:shadow-md transition-all duration-300">
+      <div className="project-card bg-gradient-to-br from-gray-50 to-purple-50 rounded-2xl p-8 shadow-sm hover:shadow-md transition-all duration-300">
         <h4 className="font-bold text-xl mb-4 text-gray-800">
           WhatsApp Widget
           <span className="text-sm font-normal text-gray-500 ml-3 bg-white px-3 py-1 rounded-full">

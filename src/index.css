@@ -9,7 +9,8 @@
 @media print {
   body {
     margin: 0;
-    padding: 0;
+    padding: 0 !important;
+    margin: 0 !important;
     background: white;
   }
 
@@ -17,6 +18,7 @@
     max-width: none !important;
     width: 100% !important;
     padding: 0 !important;
+    margin: 0 !important;
   }
 
   #resume {
@@ -73,6 +75,15 @@
 
   .md\:w-2\/3 {
     width: 66.666667% !important;
+  }
+
+  .to-pink-50 {
+    background: none !important;
+  }
+
+  .py-12,
+  .px-4 {
+    padding: 0 !important;
   }
 
   /* 调整文本大小 */

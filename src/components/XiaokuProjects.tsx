@@ -1,7 +1,7 @@
 const XiaokuProjects = () => {
   return (
     <div className="space-y-8">
-      <div className="bg-gradient-to-br from-gray-50 to-purple-50 rounded-2xl p-8 shadow-sm hover:shadow-md transition-all duration-300">
+      <div className="project-card bg-gradient-to-br from-gray-50 to-purple-50 rounded-2xl p-8 shadow-sm hover:shadow-md transition-all duration-300">
         <h4 className="font-bold text-xl mb-4 text-gray-800">
           CAD智能审图平台
           <span className="text-sm font-normal text-gray-500 ml-3 bg-white px-3 py-1 rounded-full">
@@ -31,7 +31,7 @@ const XiaokuProjects = () => {
         </div>
       </div>
 
-      <div className="bg-gradient-to-br from-gray-50 to-purple-50 rounded-2xl p-8 shadow-sm hover:shadow-md transition-all duration-300">
+      <div className="project-card bg-gradient-to-br from-gray-50 to-purple-50 rounded-2xl p-8 shadow-sm hover:shadow-md transition-all duration-300">
         <h4 className="font-bold text-xl mb-4 text-gray-800">
           智能建筑设计系统
           <span className="text-sm font-normal text-gray-500 ml-3 bg-white px-3 py-1 rounded-full">
@@ -61,7 +61,7 @@ const XiaokuProjects = () => {
         </div>
       </div>
 
-      <div className="bg-gradient-to-br from-gray-50 to-purple-50 rounded-2xl p-8 shadow-sm hover:shadow-md transition-all duration-300">
+      <div className="project-card bg-gradient-to-br from-gray-50 to-purple-50 rounded-2xl p-8 shadow-sm hover:shadow-md transition-all duration-300">
         <h4 className="font-bold text-xl mb-4 text-gray-800">
           管理平台
           <span className="text-sm font-normal text-gray-500 ml-3 bg-white px-3 py-1 rounded-full">
