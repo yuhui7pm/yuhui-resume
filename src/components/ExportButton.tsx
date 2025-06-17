@@ -1,5 +1,4 @@
 import * as htmlToImage from 'html-to-image'
-import html2pdf from 'html2pdf.js'
 
 interface ExportButtonProps {
   onExportStart: (message?: string) => void
@@ -7,72 +6,6 @@ interface ExportButtonProps {
 }
 
 const ExportButton = ({ onExportStart, onExportEnd }: ExportButtonProps) => {
-  // 预加载并转换图片为base64的函数
-  const convertImageToBase64 = async (src: string): Promise<string> => {
-    return new Promise((resolve, reject) => {
-      const img = new Image()
-      img.crossOrigin = 'anonymous'
-      img.onload = () => {
-        const canvas = document.createElement('canvas')
-        const ctx = canvas.getContext('2d')
-        canvas.width = img.width
-        canvas.height = img.height
-        ctx?.drawImage(img, 0, 0)
-        resolve(canvas.toDataURL('image/jpeg', 0.9))
-      }
-      img.onerror = reject
-      // 尝试多个可能的路径
-      const possiblePaths = [
-        src,
-        src.startsWith('/') ? window.location.origin + src : src,
-        '/images/yuhui.jpg',
-        './images/yuhui.jpg',
-      ]
-
-      let pathIndex = 0
-      const tryNextPath = () => {
-        if (pathIndex < possiblePaths.length) {
-          img.src = possiblePaths[pathIndex]
-          pathIndex++
-        } else {
-          reject(new Error('无法加载图片'))
-        }
-      }
-
-      img.onerror = tryNextPath
-      tryNextPath()
-    })
-  }
-
-  // 替换页面中的图片为base64格式
-  const replaceImagesWithBase64 = async () => {
-    const images = document.querySelectorAll('#resume img')
-    const promises = Array.from(images).map(async (img) => {
-      const imgElement = img as HTMLImageElement
-      try {
-        const base64 = await convertImageToBase64(imgElement.src)
-        imgElement.setAttribute('data-original-src', imgElement.src)
-        imgElement.src = base64
-      } catch (error) {
-        console.warn('图片转换失败:', imgElement.src, error)
-      }
-    })
-    await Promise.all(promises)
-  }
-
-  // 恢复图片的原始src
-  const restoreOriginalImages = () => {
-    const images = document.querySelectorAll('#resume img[data-original-src]')
-    images.forEach((img) => {
-      const imgElement = img as HTMLImageElement
-      const originalSrc = imgElement.getAttribute('data-original-src')
-      if (originalSrc) {
-        imgElement.src = originalSrc
-        imgElement.removeAttribute('data-original-src')
-      }
-    })
-  }
-
   // 添加PDF友好样式的函数
   const applyPdfStyles = () => {
     const style = document.createElement('style')
@@ -396,10 +329,10 @@ const ExportButton = ({ onExportStart, onExportEnd }: ExportButtonProps) => {
   }
 
   const exportToPDF = async () => {
-    console.log('开始导出PDF')
+    console.log('开始通过API导出PDF')
 
     // 显示loading
-    onExportStart('请稍候，正在生成PDF文件')
+    onExportStart('请稍候，正在通过服务器生成PDF文件')
 
     // 临时隐藏导出按钮
     const exportButtons = document.querySelector('.export-buttons')
@@ -408,103 +341,66 @@ const ExportButton = ({ onExportStart, onExportEnd }: ExportButtonProps) => {
     }
 
     try {
-      const resumeElement = document.getElementById('resume')
-      if (!resumeElement) {
-        console.error('找不到简历元素')
-        return
-      }
-
-      // 保存原始样式和滚动位置
-      const originalScrollPos = window.scrollY
-      const originalStyle = resumeElement.style.cssText
-      const originalBodyStyle = document.body.style.cssText
-
-      // 先转换图片为base64格式
-      await replaceImagesWithBase64()
-
-      // 应用PDF友好样式
+      // 应用PDF友好样式，让服务器渲染时获得更好的效果
       applyPdfStyles()
 
-      // 准备导出环境
-      document.body.style.overflow = 'hidden'
-      document.body.style.margin = '0'
-      document.body.style.padding = '0'
-      document.body.style.background = '#ffffff'
+      // 等待样式应用完成
+      await new Promise((resolve) => setTimeout(resolve, 1000))
 
-      // 设置临时样式以确保完整捕获
-      resumeElement.style.width = `${resumeElement.offsetWidth}px`
-      resumeElement.style.margin = '0 auto'
-      resumeElement.style.transform = 'none'
-      resumeElement.style.position = 'relative'
-      resumeElement.style.top = '0'
-      resumeElement.style.left = '0'
-      resumeElement.style.borderRadius = '0'
-      resumeElement.style.boxShadow = 'none'
+      // 获取当前页面的URL
+      const currentUrl = window.location.href
 
-      // 滚动到顶部
-      window.scrollTo(0, 0)
+      // 调用API导出PDF
+      const apiUrl = 'https://html-to-pdf-exporter.onrender.com/api/url-to-pdf'
 
-      // 等待样式应用和图片加载完成
-      await new Promise((resolve) => setTimeout(resolve, 2000))
-
-      // 等待字体加载完成
-      await document.fonts.ready
-
-      // 优化的PDF导出配置
-      const options = {
-        margin: [0.1, 0.1, 0.1, 0.1] as [number, number, number, number], // 修复：极小边距
-        filename: '余晖的简历.pdf',
-        image: {
-          type: 'jpeg',
-          quality: 0.98,
+      const response = await fetch(apiUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
         },
-        html2canvas: {
-          scale: 1.5, // 平衡质量和性能
-          useCORS: true,
-          allowTaint: true,
-          backgroundColor: '#ffffff',
-          logging: false,
-          letterRendering: true, // 改善文字渲染
-          foreignObjectRendering: true, // 改善复杂元素渲染
-          scrollX: 0,
-          scrollY: 0,
-          width: resumeElement.offsetWidth,
-          height: resumeElement.offsetHeight,
-        },
-        jsPDF: {
-          unit: 'mm',
-          format: 'a4',
-          orientation: 'portrait',
-          compressPDF: false, // 不压缩以保持质量
-          putOnlyUsedFonts: true,
-          floatPrecision: 16, // 更高精度
-        },
-        pagebreak: {
-          mode: ['avoid-all', 'css', 'legacy'], // 修复：优化分页处理
-          before: ['.company-section'],
-          after: ['.page-break-after'],
-          avoid: ['.company-section', '.project-card', 'h2', 'h3', 'h4', 'li', 'p'],
-        },
+        body: JSON.stringify({
+          url: currentUrl,
+          options: {
+            format: 'A4',
+            margin: {
+              top: '0',
+              right: '0',
+              bottom: '0',
+              left: '0',
+            },
+            printBackground: true,
+            preferCSSPageSize: true,
+            displayHeaderFooter: false,
+          },
+        }),
+      })
+
+      if (!response.ok) {
+        throw new Error(`API请求失败: ${response.status} ${response.statusText}`)
       }
 
-      // 使用html2pdf导出PDF
-      await html2pdf().set(options).from(resumeElement).save()
+      // 获取PDF文件
+      const blob = await response.blob()
 
-      // 恢复原始样式和滚动位置
-      resumeElement.style.cssText = originalStyle
-      document.body.style.cssText = originalBodyStyle
-      window.scrollTo(0, originalScrollPos)
+      // 创建下载链接
+      const url = window.URL.createObjectURL(blob)
+      const link = document.createElement('a')
+      link.href = url
+      link.download = '余晖的简历.pdf'
+      document.body.appendChild(link)
+      link.click()
+      document.body.removeChild(link)
 
-      // 恢复图片原始路径
-      restoreOriginalImages()
+      // 清理blob URL
+      window.URL.revokeObjectURL(url)
 
-      // 移除PDF样式
-      removePdfStyles()
+      console.log('PDF导出成功')
     } catch (error) {
       console.error('导出PDF失败:', error)
+      const errorMessage = error instanceof Error ? error.message : '未知错误'
+      alert('PDF导出失败，请稍后重试。错误信息：' + errorMessage)
     } finally {
-      // 确保恢复图片和移除PDF样式
-      restoreOriginalImages()
+      // 移除PDF样式
       removePdfStyles()
 
       // 隐藏loading
@@ -517,20 +413,6 @@ const ExportButton = ({ onExportStart, onExportEnd }: ExportButtonProps) => {
     }
   }
 
-  // 浏览器原生打印功能
-  const printToPDF = () => {
-    console.log('开始使用浏览器打印功能')
-
-    // 滚动到顶部
-    window.scrollTo(0, 0)
-
-    // 等待页面滚动完成后打开打印对话框
-    setTimeout(() => {
-      // 调用浏览器打印功能
-      window.print()
-    }, 100)
-  }
-
   return (
     <div className="fixed bottom-8 right-8 flex flex-col gap-4 export-buttons">
       <button
@@ -541,7 +423,7 @@ const ExportButton = ({ onExportStart, onExportEnd }: ExportButtonProps) => {
         <i className="i-mdi-image text-3xl"></i>
       </button>
       <button
-        onClick={printToPDF}
+        onClick={exportToPDF}
         className="w-16 h-16 rounded-full bg-gradient-to-r from-purple-600 to-indigo-600 text-white flex items-center justify-center shadow-lg hover:scale-110 transition-all duration-300 ease-in-out hover:shadow-purple-300"
         title="导出PDF"
       >
