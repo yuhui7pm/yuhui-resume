@@ -7,6 +7,24 @@
 
 /* 打印样式 */
 @media print {
+  /* 页面设置 - 默认为中间页面设置上下边距 */
+  @page {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+
+  /* 第一页不设置上下边距 */
+  @page :first {
+    padding-top: 0;
+    padding-bottom: 16px;
+  }
+
+  /* 最后一页不设置上下边距 */
+  @page :last {
+    padding-top: 16px;
+    padding-bottom: 0;
+  }
+
   body {
     margin: 0;
     padding: 0 !important;
