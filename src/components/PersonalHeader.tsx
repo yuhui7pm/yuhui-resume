@@ -9,7 +9,14 @@ const PersonalHeader = () => {
           className="w-44 h-44 rounded-2xl object-cover shadow-2xl border-4 border-white/30 transition-transform duration-300 hover:scale-105"
         />
         <div>
-          <h1 className="text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-white to-purple-200 font-title">
+          <h1
+            className="text-5xl font-bold mb-4 font-title"
+            style={{
+              color: 'white',
+              textShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
+              letterSpacing: '0.05em',
+            }}
+          >
             余晖
           </h1>
           <p className="text-2xl text-purple-100 mb-6 font-title">
