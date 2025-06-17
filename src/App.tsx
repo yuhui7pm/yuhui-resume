@@ -44,7 +44,7 @@ const App = () => {
         }
       `}</style>
 
-      <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50 py-12 px-4 font-sans">
+      <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50 py-4 px-4 font-sans">
         {/* 全局Loading */}
         <LoadingModal isVisible={isExporting} message={exportMessage} />
 
