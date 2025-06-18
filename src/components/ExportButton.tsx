@@ -411,17 +411,17 @@ const ExportButton = ({ onExportStart, onExportEnd }: ExportButtonProps) => {
   }
 
   return (
-    <div className="fixed bottom-8 right-8 flex flex-col gap-4 export-buttons">
+    <div className="fixed bottom-8 right-8 flex flex-col gap-6 export-buttons">
       <button
         onClick={exportToImage}
-        className="w-16 h-16 rounded-full bg-gradient-to-r from-purple-600 to-indigo-600 text-white flex items-center justify-center shadow-lg hover:scale-110 transition-all duration-300 ease-in-out hover:shadow-purple-300"
+        className="w-20 h-20 rounded-full bg-gradient-to-r from-purple-600 to-indigo-600 text-white flex items-center justify-center shadow-lg hover:scale-110 transition-all duration-300 ease-in-out hover:shadow-purple-300"
         title="导出图片"
       >
         <i className="i-mdi-image text-3xl"></i>
       </button>
       <button
         onClick={exportToPDF}
-        className="w-16 h-16 rounded-full bg-gradient-to-r from-purple-600 to-indigo-600 text-white flex items-center justify-center shadow-lg hover:scale-110 transition-all duration-300 ease-in-out hover:shadow-purple-300"
+        className="w-20 h-20 rounded-full bg-gradient-to-r from-purple-600 to-indigo-600 text-white flex items-center justify-center shadow-lg hover:scale-110 transition-all duration-300 ease-in-out hover:shadow-purple-300"
         title="导出PDF"
       >
         <i className="i-mdi-file-pdf text-3xl"></i>
