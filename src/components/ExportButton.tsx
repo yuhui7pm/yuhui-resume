@@ -368,9 +368,6 @@ const ExportButton = ({ onExportStart, onExportEnd }: ExportButtonProps) => {
               bottom: '0',
               left: '0',
             },
-            printBackground: true,
-            preferCSSPageSize: true,
-            displayHeaderFooter: false,
           },
         }),
       })
