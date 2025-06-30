@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import LoadingModal from './components/LoadingModal'
 import PersonalHeader from './components/PersonalHeader'
 import LeftSidebar from './components/LeftSidebar'
@@ -8,6 +8,7 @@ import ExportButton from './components/ExportButton'
 const App = () => {
   const [isExporting, setIsExporting] = useState(false)
   const [exportMessage, setExportMessage] = useState('')
+  const resumeRef = useRef<HTMLDivElement>(null)
 
   const handleExportStart = (message: string = '请稍候，正在处理中...') => {
     setExportMessage(message)
@@ -51,6 +52,7 @@ const App = () => {
         <div className="container mx-auto" style={{ maxWidth: '1000px' }}>
           <div
             id="resume"
+            ref={resumeRef}
             className="bg-white rounded-3xl shadow-2xl overflow-hidden transition-all duration-300 hover:shadow-3xl"
           >
             {/* 顶部个人信息区域 */}
@@ -66,7 +68,11 @@ const App = () => {
           </div>
 
           {/* 导出按钮 */}
-          <ExportButton onExportStart={handleExportStart} onExportEnd={handleExportEnd} />
+          <ExportButton
+            onExportStart={handleExportStart}
+            onExportEnd={handleExportEnd}
+            resumeRef={resumeRef}
+          />
         </div>
       </div>
     </>
