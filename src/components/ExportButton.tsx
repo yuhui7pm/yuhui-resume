@@ -10,30 +10,10 @@ interface ExportButtonProps {
 const ExportButton = ({ onExportStart, onExportEnd, resumeRef }: ExportButtonProps) => {
   // 使用浏览器自带的打印功能导出PDF
   const handlePrint = () => {
-    onExportStart('请稍候，正在准备PDF文件')
-
-    // 临时隐藏导出按钮
-    const exportButtons = document.querySelector('.export-buttons')
-    if (exportButtons) {
-      exportButtons.classList.add('hidden')
-    }
-
-    // 等待样式应用
+    // 等待样式应用后直接打印
     setTimeout(() => {
       window.print()
-
-      // 监听打印对话框关闭
-      const handleAfterPrint = () => {
-        onExportEnd()
-        // 恢复导出按钮显示
-        if (exportButtons) {
-          exportButtons.classList.remove('hidden')
-        }
-        window.removeEventListener('afterprint', handleAfterPrint)
-      }
-
-      window.addEventListener('afterprint', handleAfterPrint)
-    }, 500)
+    }, 100)
   }
 
   const exportToImage = async () => {
