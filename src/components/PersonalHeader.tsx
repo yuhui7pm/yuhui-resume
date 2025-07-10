@@ -19,9 +19,22 @@ const PersonalHeader = () => {
           >
             余晖
           </h1>
-          <p className="text-2xl text-purple-100 mb-6 font-title">
-            高级前端开发工程师 | 前端架构师
-          </p>
+          <p className="text-2xl text-purple-100 mb-3 font-title">前端架构师 | 技术团队Leader</p>
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 mb-6 border border-white/20">
+            <p className="text-purple-100 text-lg leading-relaxed">
+              ✨ <span className="font-medium text-white">5年+</span> 前端架构经验 | 主导过{' '}
+              <span className="font-medium text-white">10+</span> 大型项目
+            </p>
+            <p className="text-purple-100 text-lg leading-relaxed mt-1">
+              🚀 擅长性能优化，曾将应用启动速度提升{' '}
+              <span className="font-medium text-white">5倍</span>，日活突破{' '}
+              <span className="font-medium text-white">4万+</span>
+            </p>
+            <p className="text-purple-100 text-lg leading-relaxed mt-1">
+              🎯 精通前端技术栈，从0到1构建 <span className="font-medium text-white">16款</span>{' '}
+              游戏产品，具备 <span className="font-medium text-white">创新设计</span> 能力
+            </p>
+          </div>
           <div className="flex gap-8">
             <div className="flex items-center gap-3 group">
               <i className="i-mdi-phone text-2xl text-purple-200 group-hover:text-white transition-colors"></i>

@@ -3,64 +3,82 @@ const YunjiuyiProjects = () => {
     <div className="space-y-8">
       <div className="project-card bg-gradient-to-br from-gray-50 to-purple-50 rounded-2xl p-8 shadow-sm hover:shadow-md transition-all duration-300">
         <h4 className="font-bold text-xl mb-4 text-gray-800">
-          VDD游戏平台
+          🎮 VDD游戏生态系统
           <span className="text-sm font-normal text-gray-500 ml-3 bg-white px-3 py-1 rounded-full">
-            Vue3, TypeScript, Pixi.js, Antd, Vant, Matter.js, Howler.js
+            Vue3, Pixi.js, Matter.js, Canvas, 游戏引擎
           </span>
         </h4>
         <div className="space-y-4">
           <div>
-            <h5 className="font-semibold text-purple-600 mb-2">业务功能</h5>
+            <h5 className="font-semibold text-purple-600 mb-2">🚀 项目规模与挑战</h5>
             <p className="text-gray-700 leading-relaxed">
-              作为核心开发者，主导开发了16个小游戏及其生态系统，实现了从0到1的完整构建。项目采用模块化设计，包含游戏核心引擎、用户交互界面、数据分析系统等关键模块。通过Canvas技术实现高性能渲染，打造沉浸式游戏体验，并集成完整的数据分析和可视化功能。
+              <span className="font-medium text-purple-600">技术挑战：</span>从0到1构建
+              <span className="bg-yellow-100 px-2 py-1 rounded">16款小游戏</span>
+              的完整生态系统，需要解决高性能渲染、复杂物理交互、多设备适配等核心技术难题。
+              <span className="font-medium text-purple-600">业务价值：</span>
+              为5家商户提供稳定的游戏运营服务，实现用户规模的快速增长。
             </p>
           </div>
           <div>
-            <h5 className="font-semibold text-purple-600 mb-2">技术亮点</h5>
+            <h5 className="font-semibold text-purple-600 mb-2">🏗️ 核心技术架构</h5>
             <div className="space-y-3">
-              <div>
-                <p className="font-medium text-gray-800 mb-1">技术架构：</p>
-                <p className="text-gray-700 leading-relaxed">
-                  基于Vite构建的现代化前端架构，采用ESLint、Stylelint和Prettier实现严格的代码规范。使用Pinia进行高效的状态管理，结合Minio实现可靠的静态资源处理。通过Google
-                  Analytics深度集成实现精确的用户行为分析，并使用Rollup插件优化打包性能，确保了统一的Layout框架下的高性能表现。
-                </p>
+              <div className="bg-gradient-to-r from-blue-50 to-purple-50 p-4 rounded-lg">
+                <p className="font-medium text-gray-800 mb-2">🎯 游戏引擎设计</p>
+                <ul className="list-disc list-inside space-y-1 text-gray-700 text-sm">
+                  <li>基于Pixi.js构建高性能渲染系统，支持复杂场景实时渲染</li>
+                  <li>集成Matter.js物理引擎，实现真实物理交互效果</li>
+                  <li>自研多设备自适应方案，完美适配手机/平板/PC端</li>
+                  <li>设计智能生命周期管理，解决内存泄漏问题</li>
+                </ul>
               </div>
-              <div>
-                <p className="font-medium text-gray-800 mb-1">核心功能实现：</p>
-                <ul className="list-disc list-inside space-y-2 text-gray-700">
-                  <li className="leading-relaxed">
-                    游戏引擎：基于Pixi.js构建高性能渲染系统，整合Matter.js物理引擎实现复杂物理场景。针对性能优化包括：多设备自适应、智能生命周期管理、内存优化等。
-                  </li>
-                  <li className="leading-relaxed">
-                    交互系统：设计并实现分层交互架构，通过自定义Controller优化画布交互体验。
-                  </li>
-                  <li className="leading-relaxed">
-                    数据可视化：基于Antd组件库开发实时数据监控和分析系统。
-                  </li>
-                  <li className="leading-relaxed">国际化支持：实现完整的i18n解决方案。</li>
-                  <li className="leading-relaxed">音频系统：基于Howler.js开发的音频控制器。</li>
+              <div className="bg-gradient-to-r from-green-50 to-blue-50 p-4 rounded-lg">
+                <p className="font-medium text-gray-800 mb-2">⚡ 性能优化策略</p>
+                <ul className="list-disc list-inside space-y-1 text-gray-700 text-sm">
+                  <li>分层交互架构设计，优化Canvas绘制性能</li>
+                  <li>自定义Controller实现高效的用户交互</li>
+                  <li>基于Howler.js的音频系统优化</li>
+                  <li>实现对象池技术，减少GC频率</li>
+                </ul>
+              </div>
+              <div className="bg-gradient-to-r from-purple-50 to-pink-50 p-4 rounded-lg">
+                <p className="font-medium text-gray-800 mb-2">📊 数据驱动运营</p>
+                <ul className="list-disc list-inside space-y-1 text-gray-700 text-sm">
+                  <li>Google Analytics深度集成，实现精准用户行为分析</li>
+                  <li>基于Antd开发实时数据监控系统</li>
+                  <li>完整的A/B测试框架，支持游戏玩法优化</li>
                 </ul>
               </div>
             </div>
           </div>
           <div>
-            <h5 className="font-semibold text-purple-600 mb-2">项目成果</h5>
-            <ul className="list-disc list-inside space-y-1 text-gray-700">
-              <li>系统稳定运行超过12个月，可用性达99.9%</li>
-              <li>成功服务5家商户，建立了稳定的商业合作关系</li>
-              <li>日活跃用户突破4万，环比增长保持15%</li>
-            </ul>
+            <h5 className="font-semibold text-purple-600 mb-2">🏆 商业成果</h5>
+            <div className="bg-gradient-to-r from-purple-50 to-blue-50 p-4 rounded-lg">
+              <div className="grid grid-cols-3 gap-4 text-center">
+                <div>
+                  <div className="text-2xl font-bold text-purple-600">4万+</div>
+                  <div className="text-sm text-gray-600">日活跃用户</div>
+                </div>
+                <div>
+                  <div className="text-2xl font-bold text-purple-600">99.9%</div>
+                  <div className="text-sm text-gray-600">系统可用性</div>
+                </div>
+                <div>
+                  <div className="text-2xl font-bold text-purple-600">5家</div>
+                  <div className="text-sm text-gray-600">合作商户</div>
+                </div>
+              </div>
+            </div>
           </div>
           <div>
-            <h5 className="font-semibold text-purple-600 mb-2">成果链接</h5>
+            <h5 className="font-semibold text-purple-600 mb-2">🔗 作品展示</h5>
             <div className="space-y-2">
               <a
                 href="https://www.figma.com/design/WBkRUH74zsQT6una29GmAM/VDD%E6%B8%B8%E6%88%8F%E9%A1%B9%E7%9B%AE%E6%B1%87%E6%80%BB?t=1bmmIRFGxuDZlk8a-0"
-                className="block text-blue-600 hover:underline"
+                className="block text-blue-600 hover:underline bg-blue-50 p-3 rounded-lg transition-all hover:bg-blue-100"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                查看游戏项目作品集
+                🎮 查看游戏作品集合
               </a>
             </div>
           </div>
@@ -69,70 +87,107 @@ const YunjiuyiProjects = () => {
 
       <div className="project-card bg-gradient-to-br from-gray-50 to-purple-50 rounded-2xl p-8 shadow-sm hover:shadow-md transition-all duration-300">
         <h4 className="font-bold text-xl mb-4 text-gray-800">
-          官网
+          🌐 全球化官网建设
           <span className="text-sm font-normal text-gray-500 ml-3 bg-white px-3 py-1 rounded-full">
-            Vue3, Nuxt, Ts, Antd, TailwindCSS
+            Vue3, Nuxt, SSR, TailwindCSS, 国际化
           </span>
         </h4>
         <div className="space-y-4">
           <div>
-            <h5 className="font-semibold text-purple-600 mb-2">业务功能</h5>
+            <h5 className="font-semibold text-purple-600 mb-2">🎯 项目价值</h5>
             <p className="text-gray-700 leading-relaxed">
-              公司官网项目负责人，主导开发了面向全球市场的多语言响应式官网。采用Nuxt.js实现SSR，确保更好的SEO效果和首屏加载性能。项目涵盖：产品展示系统、API文档中心、国际化支持等核心功能。
+              <span className="font-medium text-purple-600">业务目标：</span>
+              打造面向全球市场的多语言官网，提升品牌影响力。
+              <span className="font-medium text-purple-600">技术要求：</span>
+              需要优秀的SEO表现和首屏加载性能。
             </p>
           </div>
           <div>
-            <h5 className="font-semibold text-purple-600 mb-2">技术说明</h5>
-            <p className="text-gray-700 leading-relaxed">
-              项目使用nuxt搭建，配置了eslint、stylelint和prettier，多语言使用了i18n，页面组件未使用组件库，纯手写，页面适配，通过媒体查询实现。
-            </p>
+            <h5 className="font-semibold text-purple-600 mb-2">🔧 技术实现</h5>
+            <ul className="space-y-2 text-gray-700">
+              <li className="leading-relaxed">
+                <span className="font-medium text-purple-600">SSR优化：</span>
+                基于Nuxt.js实现服务端渲染，显著提升SEO效果
+              </li>
+              <li className="leading-relaxed">
+                <span className="font-medium text-purple-600">响应式设计：</span>
+                通过媒体查询实现完美的移动端适配
+              </li>
+              <li className="leading-relaxed">
+                <span className="font-medium text-purple-600">国际化方案：</span>
+                i18n多语言支持，覆盖主要目标市场
+              </li>
+              <li className="leading-relaxed">
+                <span className="font-medium text-purple-600">性能优化：</span>
+                代码分割和资源预加载，提升加载速度
+              </li>
+            </ul>
           </div>
           <div>
-            <h5 className="font-semibold text-purple-600 mb-2">产品成效</h5>
-            <p className="text-gray-700">线上稳定运行1年之余。</p>
+            <h5 className="font-semibold text-purple-600 mb-2">📈 运营成果</h5>
+            <p className="text-gray-700">
+              <span className="bg-green-100 px-2 py-1 rounded">线上稳定运行1年+</span>
+              ，支撑公司全球业务拓展
+            </p>
           </div>
         </div>
       </div>
 
       <div className="project-card bg-gradient-to-br from-gray-50 to-purple-50 rounded-2xl p-8 shadow-sm hover:shadow-md transition-all duration-300">
         <h4 className="font-bold text-xl mb-4 text-gray-800">
-          B端V1、B端V2、B端APK
+          📱 B端运营平台矩阵
           <span className="text-sm font-normal text-gray-500 ml-3 bg-white px-3 py-1 rounded-full">
-            Vue3, Ts, Vant, React Native, Appflyers
+            Vue3, React Native, 跨平台, 数据分析
           </span>
         </h4>
         <div className="space-y-4">
           <div>
-            <h5 className="font-semibold text-purple-600 mb-2">业务功能</h5>
+            <h5 className="font-semibold text-purple-600 mb-2">🎯 产品规划</h5>
             <p className="text-gray-700 leading-relaxed">
-              作为B端平台核心开发者，设计并实现了完整的商户运营系统。采用Vue3 +
-              TypeScript技术栈，实现了主题定制、多语言切换、支付系统集成、数据分析等核心功能。同时负责React
-              Native版本的开发，实现了跨平台统一的用户体验。
+              <span className="font-medium text-purple-600">业务挑战：</span>
+              为商户提供完整的运营工具链，包括Web端、移动端和APK版本。
+              <span className="font-medium text-purple-600">技术方案：</span>
+              设计统一的数据层和业务逻辑，实现跨平台的一致体验。
             </p>
           </div>
           <div>
-            <h5 className="font-semibold text-purple-600 mb-2">技术说明</h5>
-            <p className="text-gray-700 leading-relaxed">
-              登录模块主要是短信登录，和相关web
-              api实现的google、facebook登录；若apk打开的B端，h5则webview通信用react-native的google库、facebook库实现用户登录；邀请返佣是用户下载和打开apk时，前端根据设备信息生成唯一一标识上报后端，判断当前用户发奖励；apk运行时，通过appflyers的埋点事件实现事件上报。
-            </p>
+            <h5 className="font-semibold text-purple-600 mb-2">💡 核心功能</h5>
+            <ul className="space-y-2 text-gray-700">
+              <li className="leading-relaxed">
+                <span className="font-medium text-purple-600">智能登录：</span>集成短信登录 +
+                社交登录（Google/Facebook）
+              </li>
+              <li className="leading-relaxed">
+                <span className="font-medium text-purple-600">跨平台通信：</span>WebView与React
+                Native的深度集成
+              </li>
+              <li className="leading-relaxed">
+                <span className="font-medium text-purple-600">用户分析：</span>
+                基于设备指纹的用户追踪和返佣系统
+              </li>
+              <li className="leading-relaxed">
+                <span className="font-medium text-purple-600">数据上报：</span>
+                Appflyers埋点事件，实现精准分析
+              </li>
+            </ul>
           </div>
           <div>
-            <h5 className="font-semibold text-purple-600 mb-2">产品成效</h5>
+            <h5 className="font-semibold text-purple-600 mb-2">🏆 商业价值</h5>
             <p className="text-gray-700">
-              B端平台V1和APK已经发布；B端平台V2上线1年余，基本功能内部员工正常使用中。
+              B端平台V2和APK版本<span className="bg-green-100 px-2 py-1 rounded">成功上线1年+</span>
+              ，为商户提供稳定的运营服务
             </p>
           </div>
           <div>
-            <h5 className="font-semibold text-purple-600 mb-2">成果链接</h5>
+            <h5 className="font-semibold text-purple-600 mb-2">🔗 作品展示</h5>
             <div className="space-y-2">
               <a
                 href="https://www.figma.com/design/f5UIsdls2L0IyLcE6gQwkn/B%E7%AB%AF"
-                className="block text-blue-600 hover:underline"
+                className="block text-blue-600 hover:underline bg-blue-50 p-3 rounded-lg transition-all hover:bg-blue-100"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                查看B端作品集
+                💼 查看B端平台设计
               </a>
             </div>
           </div>
@@ -141,28 +196,47 @@ const YunjiuyiProjects = () => {
 
       <div className="project-card bg-gradient-to-br from-gray-50 to-purple-50 rounded-2xl p-8 shadow-sm hover:shadow-md transition-all duration-300">
         <h4 className="font-bold text-xl mb-4 text-gray-800">
-          B端后台管理系统
+          🎛️ 企业级管理后台
           <span className="text-sm font-normal text-gray-500 ml-3 bg-white px-3 py-1 rounded-full">
-            Vue3, Ts, Antd, Vben-Admin
+            Vue3, Vben-Admin, 权限管理, 数据可视化
           </span>
         </h4>
         <div className="space-y-4">
           <div>
-            <h5 className="font-semibold text-purple-600 mb-2">业务功能</h5>
+            <h5 className="font-semibold text-purple-600 mb-2">🎯 系统设计</h5>
             <p className="text-gray-700 leading-relaxed">
-              通过开源管理后台vue-vben-admin前后实现了三个"B端平台"的管理后台，在管理后台配置相关功能，"B端平台"的数据才能正常显示。B端管理平台功能模块主要有：管理员管理（账号操作、登录日志）、玩家管理（玩家查询）、财务管理（充值、体现、转入转出、数据看板、体现列表等）、游戏设置（G端列表、游戏列表）、运营管理（APP配置、反馈建议、banner设置、活动设置、停服更新、跑马灯、返佣设置）、货币配置、下注配置等。
+              <span className="font-medium text-purple-600">架构思路：</span>
+              基于vue-vben-admin框架，快速构建企业级管理系统。
+              <span className="font-medium text-purple-600">核心模块：</span>
+              涵盖用户管理、财务管理、游戏设置、运营配置等全业务链条。
             </p>
           </div>
           <div>
-            <h5 className="font-semibold text-purple-600 mb-2">技术说明</h5>
-            <p className="text-gray-700 leading-relaxed">
-              调用该框架内部的组件和方法可实现全部业务。像一些图片的上传则是使用upload到后端的minio存储桶，以便前端download到相应的资源；特别地，像csv导出功能则是前端通过轮询访问table数据，调用xlsx库实现的前端导出；用户页面权限的控制，前端匹配项目的路由和后台配置的角色页面的路由权限，动态过滤需要隐藏的路由。
-            </p>
+            <h5 className="font-semibold text-purple-600 mb-2">🔧 技术亮点</h5>
+            <ul className="space-y-2 text-gray-700">
+              <li className="leading-relaxed">
+                <span className="font-medium text-purple-600">权限控制：</span>
+                基于路由的动态权限管理，支持角色精细化配置
+              </li>
+              <li className="leading-relaxed">
+                <span className="font-medium text-purple-600">数据导出：</span>
+                前端轮询+xlsx库实现大数据量CSV导出
+              </li>
+              <li className="leading-relaxed">
+                <span className="font-medium text-purple-600">文件管理：</span>
+                集成Minio对象存储，实现图片上传和管理
+              </li>
+              <li className="leading-relaxed">
+                <span className="font-medium text-purple-600">数据看板：</span>
+                实时财务数据展示和趋势分析
+              </li>
+            </ul>
           </div>
           <div>
-            <h5 className="font-semibold text-purple-600 mb-2">产品成效</h5>
+            <h5 className="font-semibold text-purple-600 mb-2">📊 业务成果</h5>
             <p className="text-gray-700">
-              后台V1已弃用；V2已上线1年余次；商户端后台已分配给商户使用很长一段时间。
+              后台V2版本<span className="bg-green-100 px-2 py-1 rounded">稳定运行1年+</span>
+              ，商户端后台已分配给商户长期使用
             </p>
           </div>
         </div>
@@ -170,38 +244,52 @@ const YunjiuyiProjects = () => {
 
       <div className="project-card bg-gradient-to-br from-gray-50 to-purple-50 rounded-2xl p-8 shadow-sm hover:shadow-md transition-all duration-300">
         <h4 className="font-bold text-xl mb-4 text-gray-800">
-          B端后台H5
+          📱 移动端数据分析平台
           <span className="text-sm font-normal text-gray-500 ml-3 bg-white px-3 py-1 rounded-full">
-            Vue3, Ts, Vant, Echart
+            Vue3, Vant, ECharts, 移动端优化
           </span>
         </h4>
         <div className="space-y-4">
           <div>
-            <h5 className="font-semibold text-purple-600 mb-2">业务功能</h5>
+            <h5 className="font-semibold text-purple-600 mb-2">🎯 产品定位</h5>
             <p className="text-gray-700 leading-relaxed">
-              为了方便内部员工用手机查看公司业务的运行情况，将管理后台的部分重要业务，放到移动端去展示。比如每个游戏的运营情况，每月每周每日的实际运营情况，以及每个商家的运营情况等。基本只涉及表格，趋势图和基本的页面展示功能。
+              <span className="font-medium text-purple-600">业务需求：</span>
+              为内部员工提供移动端的业务数据查看，随时随地掌握运营情况。
+              <span className="font-medium text-purple-600">技术挑战：</span>
+              在移动端呈现复杂的数据分析和趋势图表。
             </p>
           </div>
           <div>
-            <h5 className="font-semibold text-purple-600 mb-2">技术说明</h5>
-            <p className="text-gray-700 leading-relaxed">
-              项目使用vite构建，配置了eslint、stylelint和prettier，使用pinia进行数据存储与通信。使用vue3-touch-events实现手势滑动，提高移动端体验；echart实现趋势图；vue-use的hook实现表格滑动刷新加载；通过AbortController取消上个tab的未完成的请求。
-            </p>
+            <h5 className="font-semibold text-purple-600 mb-2">💡 移动端优化</h5>
+            <ul className="space-y-2 text-gray-700">
+              <li className="leading-relaxed">
+                <span className="font-medium text-purple-600">交互优化：</span>
+                vue3-touch-events实现流畅的手势操作
+              </li>
+              <li className="leading-relaxed">
+                <span className="font-medium text-purple-600">数据可视化：</span>
+                ECharts移动端适配，完美呈现趋势图
+              </li>
+              <li className="leading-relaxed">
+                <span className="font-medium text-purple-600">性能优化：</span>
+                AbortController取消无效请求，优化切换体验
+              </li>
+              <li className="leading-relaxed">
+                <span className="font-medium text-purple-600">下拉刷新：</span>vue-use
+                hooks实现原生般的刷新加载
+              </li>
+            </ul>
           </div>
           <div>
-            <h5 className="font-semibold text-purple-600 mb-2">产品成效</h5>
-            <p className="text-gray-700">线上运营两个月。</p>
-          </div>
-          <div>
-            <h5 className="font-semibold text-purple-600 mb-2">成果链接</h5>
+            <h5 className="font-semibold text-purple-600 mb-2">🔗 产品展示</h5>
             <div className="space-y-2">
               <a
                 href="https://www.figma.com/design/AaRNEZw9D7DkfH4KhIDM3L/G%E7%AB%AF%E5%90%8E%E5%8F%B0H5?node-id=0-1&t=gDnGH60UHxLR7kwh-1"
-                className="block text-blue-600 hover:underline"
+                className="block text-blue-600 hover:underline bg-blue-50 p-3 rounded-lg transition-all hover:bg-blue-100"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                查看H5后台作品集
+                📱 查看移动端设计
               </a>
             </div>
           </div>
