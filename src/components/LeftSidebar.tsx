@@ -5,9 +5,6 @@ const LeftSidebar = () => {
     { name: 'Pixi.js/Canvas', level: 85, category: 'graphics' },
     { name: 'Node.js', level: 80, category: 'backend' },
     { name: 'React Native', level: 75, category: 'mobile' },
-    { name: 'Unity/游戏引擎', level: 70, category: 'game' },
-    { name: '微前端架构', level: 85, category: 'architecture' },
-    { name: 'Vite/构建优化', level: 90, category: 'tools' },
   ]
 
   const achievements = [
