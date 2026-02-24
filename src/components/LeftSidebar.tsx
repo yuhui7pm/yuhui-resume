@@ -92,42 +92,6 @@ const LeftSidebar = () => {
           ))}
         </div>
       </section>
-
-      <section className="transform transition-all duration-300 hover:translate-x-2">
-        <h2 className="text-2xl font-bold mb-6 text-gray-800 border-b-2 border-purple-200 pb-2 flex items-center">
-          <i className="i-mdi-web mr-3 text-2xl text-purple-600"></i>技术分享
-        </h2>
-        <div className="space-y-2">
-          <a
-            href="https://blog.csdn.net/qq_40511157?type=blog"
-            className="flex items-center gap-3 group hover:bg-purple-50 p-3 rounded-lg transition-all"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <i className="i-mdi-link text-xl text-purple-600 group-hover:scale-110 transition-transform"></i>
-            <div>
-              <span className="text-purple-600 group-hover:text-purple-800 block font-medium">
-                CSDN技术博客
-              </span>
-              <span className="text-sm text-gray-500">前端技术分享</span>
-            </div>
-          </a>
-          <a
-            href="https://github.com/yuhui7pm?tab=repositories"
-            className="flex items-center gap-3 group hover:bg-purple-50 p-3 rounded-lg transition-all"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <i className="i-mdi-github text-xl text-purple-600 group-hover:scale-110 transition-transform"></i>
-            <div>
-              <span className="text-purple-600 group-hover:text-purple-800 block font-medium">
-                GitHub开源项目
-              </span>
-              <span className="text-sm text-gray-500">代码作品集</span>
-            </div>
-          </a>
-        </div>
-      </section>
     </div>
   )
 }
