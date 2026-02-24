@@ -24,6 +24,10 @@ const App = () => {
     <>
       {/* 自定义样式 */}
       <style>{`
+        html {
+          background: #fbf5fd;
+          background-attachment: fixed;
+        }
         .animation-delay-75 {
           animation-delay: 75ms;
         }
@@ -45,7 +49,7 @@ const App = () => {
         }
       `}</style>
 
-      <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50 py-4 px-4 font-sans">
+      <div className="min-h-screen py-4 px-4 font-sans">
         {/* 全局Loading */}
         <LoadingModal isVisible={isExporting} message={exportMessage} />
 
