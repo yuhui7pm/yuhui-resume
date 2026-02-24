@@ -22,7 +22,7 @@ const PersonalHeader = () => {
           <p className="text-2xl text-purple-100 mb-3 font-title">前端架构师 | 技术团队Leader</p>
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 mb-6 border border-white/20">
             <p className="text-purple-100 text-lg leading-relaxed">
-              ✨ <span className="font-medium text-white">5年+</span> 前端架构经验 | 主导过{' '}
+              ✨ <span className="font-medium text-white">5年+</span> 前端开发经验 | 主导过{' '}
               <span className="font-medium text-white">10+</span> 大型项目
             </p>
             <p className="text-purple-100 text-lg leading-relaxed mt-1">

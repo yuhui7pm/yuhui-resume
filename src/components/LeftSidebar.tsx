@@ -11,6 +11,7 @@ const LeftSidebar = () => {
   ]
 
   const achievements = [
+    { icon: 'i-mdi-sitemap', text: '前端架构设计', desc: '2-3年架构经验' },
     { icon: 'i-mdi-trophy', text: '技术团队Leader', desc: '管理10+人团队' },
     { icon: 'i-mdi-rocket', text: '性能优化专家', desc: '提升应用性能5倍' },
     { icon: 'i-mdi-lightbulb', text: '产品创新能力', desc: '草图转建筑设计' },
@@ -51,7 +52,7 @@ const LeftSidebar = () => {
           <div className="flex items-center gap-3 group hover:bg-purple-50 p-2 rounded-lg transition-all">
             <i className="i-mdi-clock text-xl text-purple-600 group-hover:scale-110 transition-transform"></i>
             <span className="text-gray-700">
-              <span className="font-medium text-purple-600">5年+</span> 前端架构经验
+              <span className="font-medium text-purple-600">5年+</span> 前端开发经验
             </span>
           </div>
           <div className="flex items-center gap-3 group hover:bg-purple-50 p-2 rounded-lg transition-all">
